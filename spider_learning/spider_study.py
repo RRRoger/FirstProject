@@ -1,4 +1,4 @@
-__author__ = 'CQC'
+_author__ = 'CQC'
 # -*- coding:utf-8 -*-
  
 import urllib
