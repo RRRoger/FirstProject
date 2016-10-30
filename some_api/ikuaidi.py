@@ -22,7 +22,7 @@ def get_express_info(order,kuaidi_id,sort='desc',show='json'):
         conn = httplib.HTTPConnection(HOST,PORT)
         headers = {"Content-Type":"application/json","charset": "utf-8"}
         post_body = {
-            'key':'58b1418f2a5e4b658d6d8c550c8f7229//', #ikuaidi提供的key,请去ikuaidi申请,去掉后面的//即可
+            'key':'58b1418f2a5e4b658d6d8c550c8f7229', #ikuaidi提供的key,请去ikuaidi申请,去掉后面的//即可
             'order':order,
             'id':kuaidi_id,
             'ord':sort,
@@ -37,4 +37,4 @@ def get_express_info(order,kuaidi_id,sort='desc',show='json'):
     finally:
         if conn:
             conn.close()
-print get_express_info('3928220732876','yunda','desc','json')
+print get_express_info('883137683969763372 ','yuantong','desc','json')
