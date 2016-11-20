@@ -415,175 +415,37 @@ def unparse(input_dict, output=None, encoding='utf-8', full_document=True,
 #     return unparse(final_post_body, full_document=True)
 # print get_final_post_body()
 
-xxx = """<?xml version="1.0" encoding="utf-8"?>
-<Request service="VENDOR_SERVICE" lang="zh-CN">
-  <Body>
-    <VendorRequest>
-      <CompanyCode>HUOZHU</CompanyCode>
-      <Vendors>
-        <Vendor>
-          <Province>江苏省</Province>
-          <City>苏州市</City>
-          <VendorCode>mixbox</VendorCode>
-          <Aera>工业园区</Aera>
-          <PhoneNum>83736862</PhoneNum>
-          <FaxNum>333</FaxNum>
-          <AttentionTo>陈鹏</AttentionTo>
-          <Address>001</Address>
-          <VendorName>美爆</VendorName>
-        </Vendor>
-      </Vendors>
-      <Vendors>
-        <Vendor>
-          <Province>北京市</Province>
-          <City>北京市</City>
-          <VendorCode>chenpeng</VendorCode>
-          <Aera>大兴区</Aera>
-          <PhoneNum>v111</PhoneNum>
-          <FaxNum>peng</FaxNum>
-          <AttentionTo>111</AttentionTo>
-          <Address>八大胡同</Address>
-          <VendorName>chenpeng</VendorName>
-        </Vendor>
-      </Vendors>
-    </VendorRequest>
-  </Body>
-  <Head>
-    <Checkword>3</Checkword>
-    <AccessCode>1</AccessCode>
-  </Head>
-</Request>
+xxx = """
 
 """
 
-yy = {
-    'VendorRequest': {
-        'CompanyCode': u'HUOZHU',
-        'Vendors': [
-            {
-                'Vendor': {
-                    'Province': u'江苏省',
-                    'City': u'苏州市',
-                    'VendorCode': u'mixbox',
-                    'Aera': u'工业园区',
-                    'PhoneNum': u'83736862',
-                    'FaxNum': u'333',
-                    'AttentionTo': u'陈鹏',
-                    'Address': u'001',
-                    'VendorName': u'美爆'
-                }
-            },
-            {
-                'Vendor': {
-                    'Province': u'北京市',
-                    'City': u'北京市',
-                    'VendorCode': u'chenpeng',
-                    'Aera': u'大兴区',
-                    'PhoneNum': u'v111',
-                    'FaxNum': u'peng',
-                    'AttentionTo': u'111',
-                    'Address': u'八大胡同',
-                    'VendorName': u'chenpeng'
-                }
-            }
-        ]
-    }
-}
-
-# xxx = """<chenpeng name="asd"><names><s1>CP1</s1><s1>CP2</s1><s1>CP3</s1></names></chenpeng>"""
-xxx = """<Response service="RT_INVENTORY_QUERY_SERVICE" lang="zh-CN"><Head>PART</Head><Body><RTInventoryQueryResponse>
-  <RTInventorys>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>121222</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>111223</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>112334</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>119000</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>120111</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>101224</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>102335</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>103446</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>104557</SkuNo>
-      </Header>
-    </RTInventory>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>105668</SkuNo>
-      </Header>
-    </RTInventory>
-  </RTInventorys>
-  <CompanyCode>ZX08310101</CompanyCode>
-  <WarehouseCode>571DCF</WarehouseCode>
-</RTInventoryQueryResponse></Body></Response>"""
+yy = {u'Response': {u'Body': {u'CancelPurchaseOrderResponse': {u'PurchaseOrders': {u'PurchaseOrder': {u'Note': u'入库单取消成功', u'ErpOrder': u'16110400111', u'Result': u'1'}}}}, u'@service': u'CANCEL_PURCHASE_ORDER_SERVICE', u'Head': u'OK', u'@lang': u'zh-CN'}}
 
 
-yyy = """<Response service="RT_INVENTORY_QUERY_SERVICE" lang="zh-CN"><Head>PART</Head><Body><RTInventoryQueryResponse>
-  <RTInventorys>
-    <RTInventory>
-      <Result>2</Result>
-      <Note>商品无库存信息</Note>
-      <Header>
-        <SkuNo>121222</SkuNo>
-      </Header>
-    </RTInventory>
-  </RTInventorys>
-  <CompanyCode>ZX08310101</CompanyCode>
-  <WarehouseCode>571DCF</WarehouseCode>
-</RTInventoryQueryResponse></Body></Response>"""
-print json.dumps(parse(xxx))
-# print json.dumps(parse(yyy))
+yyy = """<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <SOAP-ENV:Body>
+      <rpc:QueryMemberInfoResponse xmlns:rpc="http://siebel.com/loyalty/BSQueryMemberInfoWS">
+         <Message xsi:type="xsd:string">会员信息查询成功!</Message>
+         <RedeemMes xsi:type="xsd:string"/>
+         <Result xsi:type="xsd:string">S</Result>
+         <availablepoints xsi:type="xsd:string">100</availablepoints>
+         <birth xsi:type="xsd:string">N</birth>
+         <birthday xsi:type="xsd:string">04/18/1993</birthday>
+         <cardno xsi:type="xsd:string"/>
+         <email xsi:type="xsd:string"/>
+         <freezepoints xsi:type="xsd:string">0</freezepoints>
+         <gender xsi:type="xsd:string">先生</gender>
+         <level xsi:type="xsd:string">初级会员</level>
+         <memberno xsi:type="xsd:string">J601000172</memberno>
+         <name xsi:type="xsd:string">18360d9dd6a10</name>
+         <phone xsi:type="xsd:string">18360d9dd6a10</phone>
+         <submitdate xsi:type="xsd:string">11/18/2016 17:29:25</submitdate>
+         <upgrades xsi:type="xsd:string"/>
+      </rpc:QueryMemberInfoResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>"""
+# print json.dumps(parse(xxx))
+print json.dumps(parse(yyy))
 
 # print unparse(yy)
 # print unparse({'chenpeng':{'names':[{'1':'CP1'},{'2':'CP2'},{'3':'CP3'}]}},full_document=False)
