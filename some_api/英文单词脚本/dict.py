@@ -19,19 +19,24 @@ def send_post():
 	if len(sys.argv) < 2:
 		print u"命令参考: python dict.py yourword"
 		return ""
-	word = sys.argv[1]
-	print word,':'
-	url_prefix = "https://api.shanbay.com/bdc/search/?word="
-	url = url_prefix + word
-	response = requests.get(url)
-	res = response.json()
-	data = res.get('data',False)
-	if data:
-		pronunciations_uk = data['pronunciations']['uk']
-		pronunciations_us = data['pronunciations']['us']
-		definition = data['definition']
-		return definition
-	else:
-		return u"无此单词"
+	words = sys.argv[1:]
+	# print words
+	for word in words:
+		print word,':'
+		url_prefix = "https://api.shanbay.com/bdc/search/?word="
+		url = url_prefix + word
+		response = requests.get(url)
+		res = response.json()
+		data = res.get('data',False)
+		if data:
+			pronunciations_uk = data['pronunciations']['uk']
+			pronunciations_us = data['pronunciations']['us']
+			definition = data['definition']
+			print definition
+			print ""
+		else:
+			print u"无此单词"
+			print ""
+	return ""
 
-print send_post()
+send_post()
