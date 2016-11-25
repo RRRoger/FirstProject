@@ -445,7 +445,40 @@ yyy = """<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/s
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>"""
 # print json.dumps(parse(xxx))
-print json.dumps(parse(yyy))
+def haha(yyy):
+    result = parse(yyy)  # type:xml_str
+    jsonobj = json.loads(json.dumps(result))  # xml --> str --> dict
 
+    def get_text(member_info,key):
+        return member_info[key].get('#text','')
+
+    if 'SOAP-ENV:Envelope' in jsonobj and 'SOAP-ENV:Body' in jsonobj['SOAP-ENV:Envelope']:
+        dest_dict = jsonobj['SOAP-ENV:Envelope']['SOAP-ENV:Body']
+        if 'rpc:QueryMemberInfoResponse' in dest_dict:
+            member_info = dest_dict['rpc:QueryMemberInfoResponse']
+            return {
+                'code':0,
+                'message':get_text(member_info,'Message'),
+                'RedeemMes':get_text(member_info,'RedeemMes'),
+                'Result':get_text(member_info,'Result'),
+                'availablepoints':get_text(member_info,'availablepoints'),
+                'birth':get_text(member_info,'birth'),
+                'birthday':get_text(member_info,'birthday'),
+                'cardno':get_text(member_info,'cardno'),
+                'email':get_text(member_info,'email'),
+                'freezepoints':get_text(member_info,'freezepoints'),
+                'gender':get_text(member_info,'gender'),
+                'level':get_text(member_info,'level'),
+                'memberno':get_text(member_info,'memberno'),
+                'name':get_text(member_info,'name'),
+                'phone':get_text(member_info,'phone'),
+                'submitdate':get_text(member_info,'submitdate'),
+                'upgrades':get_text(member_info,'upgrades'),
+            }
+    return {
+        'code': '1',
+        'message': yyy
+    }
+print haha(yyy)
 # print unparse(yy)
 # print unparse({'chenpeng':{'names':[{'1':'CP1'},{'2':'CP2'},{'3':'CP3'}]}},full_document=False)
