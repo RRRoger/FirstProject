@@ -1,11 +1,5 @@
 # # -*- encoding: utf-8 -*-
 
-# ==================
-# 用法, python dict.py yourword
-#
-#
-# ==================
-
 
 import sys
 reload(sys)
@@ -14,6 +8,10 @@ import json
 import requests
 """
 	1. 用法,pyhton dict.py English
+
+	2.可以批量查询英文单词信息 pyhton dict.py English1 English2 English3
+		update at 2016-11-26 00:28:53
+
 """
 def send_post():
 	if len(sys.argv) < 2:
@@ -23,8 +21,7 @@ def send_post():
 	# print words
 	for word in words:
 		print word,':'
-		url_prefix = "https://api.shanbay.com/bdc/search/?word="
-		url = url_prefix + word
+		url = "https://api.shanbay.com/bdc/search/?word=" + word
 		response = requests.get(url)
 		res = response.json()
 		data = res.get('data',False)
@@ -33,6 +30,8 @@ def send_post():
 			pronunciations_us = data['pronunciations']['us']
 			definition = data['definition']
 			print definition
+			print u"英式发音:",pronunciations_uk
+			print u"美式发音:",pronunciations_us
 			print ""
 		else:
 			print u"无此单词"
