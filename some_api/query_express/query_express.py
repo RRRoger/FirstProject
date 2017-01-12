@@ -54,6 +54,7 @@ try:
 	    data = data[::-1]
     if data:
         for r in data:
+            print date.get('num')
             print u'时间:%s' % r.get('time')
             print u'进度:%s' % r.get('content')
 
