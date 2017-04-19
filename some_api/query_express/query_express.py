@@ -30,8 +30,9 @@ try:
             conn = httplib.HTTPConnection(HOST, PORT)
             headers = {'Content-Type': 'application/json', 'charset': 'utf-8'}
             post_body = {
-                #自行申请 --!http://www.aikuaidi.cn/api/?type=2
-                'key': '********************',
+                # 自行申请 --!http://www.aikuaidi.cn/api/?type=2
+                # 'key': '********************',
+                'key': '58b1418f2a5e4b658d6d8c550c8f7229',
                 'order': order,
                 'id': kuaidi_id,
                 'ord': sort,
@@ -47,22 +48,38 @@ try:
             if conn:
                 conn.close()
 
-    res = get_express_info(billno, kuaidi_code, 'desc', 'json')
+    res = get_express_info(billno, kuaidi_code, 'asc', 'json')
     res = json.loads(res)
+    num = res.get('num', 0)  # 今天已使用次数
+    # updateTime = res.get('updateTime', 0)  # 最近更新时间
+    c_name = res.get('name', 0)  # 快递公司
+    message = res.get('message', 0)  # 其他信息
+    order = res.get('order', {}) # 快递单号
     data = res.get('data', {})
-    if isinstance(data,list):
-	    data = data[::-1]
+    if num:
+            print u'今天已使用次数 [%s]' % num
+    # if updateTime:
+    #     print u'最新更新时间 [%s]' % updateTime
+    if c_name:
+        print u'快递公司 [%s]' % c_name
+    if message:
+        print u'其他信息 [%s]' % message
+    if order:
+        print u'快递单号 [%s]' % order
+    print ''
     if data:
+        # print data
+        # print u'剩余次数[%s]' % data.get('num')
         for r in data:
-            print date.get('num')
             print u'时间:%s' % r.get('time')
             print u'进度:%s' % r.get('content')
 
         print u'祝你快递在中途爆炸,BOOM!'
-    else:
+    else Exception, e:
         print u'我猜你是输错了,或者该运单号没有信息!!'
-        print u'别瞎试,这是要钱的!!'
-except:
+        print u'错误信息:%s' % e
+except Exception, e:
+    print u'错误信息:%s' % e
     print u'使用方法:在终端输入'
-    print u'    python query_express.pyc 你的单号 快递代码'
+    print u'    python query_express.py 你的单号 快递代码'
     print u'  查询快递代码地址: http://www.aikuaidi.cn/api/?type=2'

@@ -1,20 +1,9 @@
 # # -*- encoding: utf-8 -*-
-# import xmlrpclib
-# import base64
-# # import time
 import datetime
-# from xml.etree.ElementTree import Element
-# from xml.etree.ElementTree import tostring
-# import hashlib
-# import urllib
-# import chardet
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8') 
 import re
-# import logging
-# import json
-# from decimal import Decimal
 import requests
 
 FILE_NAME = 'YOUR_NOTE.txt'
