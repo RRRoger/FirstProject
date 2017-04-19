@@ -75,9 +75,8 @@ try:
             print u'进度:%s' % r.get('content')
 
         print u'祝你快递在中途爆炸,BOOM!'
-    else Exception, e:
+    else:
         print u'我猜你是输错了,或者该运单号没有信息!!'
-        print u'错误信息:%s' % e
 except Exception, e:
     print u'错误信息:%s' % e
     print u'使用方法:在终端输入'
