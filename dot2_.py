@@ -16,7 +16,9 @@ def get_words():
 def dot2_():
     words = get_words()
     for i in words:
-        print i.replace('.', '_')
-
+        abbreviation = ''
+        for r in i.split('.'):
+            abbreviation += r[0]
+        print i.replace('.', '_'), abbreviation
 dot2_()
 
