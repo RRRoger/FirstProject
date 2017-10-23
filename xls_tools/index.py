@@ -5,7 +5,7 @@ import json
 import datetime
 
 FULL_DIR = 'excels'  # 生成excel存放路劲
-FIEL_NAME = u'data'  # 生成excel内部sheet文件名
+FILE_NAME = u'data'  # 生成excel内部sheet文件名
 DATA_PATH = './data.txt'  # json数据存放的文件名
 
 with open(DATA_PATH, 'r') as content_file:
@@ -30,7 +30,7 @@ HEADERS = [
 HEADERS = sorted(HEADERS, key=lambda x: x['seq'])
 excel_data = format_data(HEADERS, DATA)
 base64_data = excel_data_getter(u'主数据', excel_data)
-file_name = FIEL_NAME + '-' + datetime.datetime.utcnow().strftime('%Y%m%d%H%M%S') + '.xls'
+file_name = FILE_NAME + '-' + datetime.datetime.utcnow().strftime('%Y%m%d%H%M%S') + '.xls'
 full_path = save_file(FULL_DIR, file_name, base64_data)
 print u'生成excel, 路径:', full_path
 
