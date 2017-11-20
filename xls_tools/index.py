@@ -11,8 +11,10 @@ DATA_PATH = './data.txt'  # json数据存放的文件名
 with open(DATA_PATH, 'r') as content_file:
     #  获得json文本
     content = content_file.read()
-
-DATA = json.loads(content)
+try:
+    DATA = json.loads(content)
+except:
+    DATA = eval(content)
 
 # HEADERS 表头信息, 
 """
@@ -22,11 +24,18 @@ DATA = json.loads(content)
     group 聚合函数: 
         sum 该key对应的数据求和, avg 该key对应的数据求平均
 """
+
 HEADERS = [
-    {'name': u'用户名称', 'alias': 'xtyhxm', 'seq': 0, 'group':''},
-    {'name': u'用户代码', 'alias': 'xtyhdm', 'seq': 1, 'group':''},
-    {'name': u'用户代码', 'alias': 'xtyhdm', 'seq': 2, 'group':''},
+    # 表头名称, 对应key值, 表头排序, (聚合函数 sum, avg)
+    (u'商品', 'prod_no', 0, ''),
+    (u'进入互道时间', 'nt_create_date', 0, ''),
+    (u'下单时间', 'created_at', 0, ''),
+    (u'订单号', 'order_no', 0, ''),
+    (u'数量', 'quantity', 0, ''),
 ]
+
+HEADERS = [{'name':r[0], 'alias':r[1], 'seq':r[2], 'group':r[3]} for r in HEADERS]
+
 HEADERS = sorted(HEADERS, key=lambda x: x['seq'])
 excel_data = format_data(HEADERS, DATA)
 base64_data = excel_data_getter(u'主数据', excel_data)
