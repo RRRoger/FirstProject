@@ -14,23 +14,32 @@ def ftpconnect(host, username, password, port=21):
 
 
 # 从ftp下载文件
-def download_file(ftp, remotepath, localpath, need_close=True):
-    buffersize = 1024
+def download_file(ftp, remotepath, localpath, buffersize=1024):
+    """
+        @param: ftp 连接实例
+        @param: remotepath 远程文件地址 ***** 是文件路径 不是目标存放目录的路径
+        @param: localpath 本地临时文件地址
+        @param: buffersize
+    """
     fp = open(localpath, 'wb')
     ftp.retrbinary('RETR ' + remotepath, fp.write, buffersize)
     ftp.set_debuglevel(0)
-    if need_close:
-        fp.close()
+    fp.close()
 
 
 # 从本地上传文件到ftp
-def upload_file(ftp, remotepath, localpath, need_close=True):
-    buffersize = 1024
+def upload_file(ftp, remotepath, localpath, buffersize=1024):
+    """
+        @param: ftp 连接实例
+        @param: remotepath 远程文件地址 ***** 是文件路径 不是目标存放目录的路径
+        @param: localpath 本地临时文件地址
+        @param: buffersize
+    """
     fp = open(localpath, 'rb')
     ftp.storbinary('STOR ' + remotepath, fp, buffersize)
     ftp.set_debuglevel(0)
-    if need_close:
-        fp.close()
+    fp.close()
+
 
 def xx():
     with open('bx1.txt', 'w+') as input_file:
