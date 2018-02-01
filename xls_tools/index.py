@@ -34,7 +34,7 @@ HEADERS = [
     (u'数量', 'quantity', 0, ''),
 ]
 
-HEADERS = [{'name':r[0], 'alias':r[1], 'seq':r[2], 'group':r[3]} for r in HEADERS]
+HEADERS = [{'name':r[0] or r[1], 'alias':r[1], 'seq':r[2], 'group':r[3]} for r in HEADERS]
 
 HEADERS = sorted(HEADERS, key=lambda x: x['seq'])
 excel_data = format_data(HEADERS, DATA)
