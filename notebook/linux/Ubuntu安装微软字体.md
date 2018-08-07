@@ -26,16 +26,6 @@ sudo mkfontdir
 sudo fc-cache -fv
 ```
 
-### 5.修改权限，并更新字体缓存
-
-```sh
-sudo chmod -R 777  /usr/share/fonts/truetype/windows-font
-cd /usr/share/fonts/truetype/windows-font
-sudo mkfontscale
-sudo mkfontdir
-sudo fc-cache -fv
-```
-
 
 ```sh
 # 如果出现 mkfontscale: command not found 错, 则执行以下命令, 否则跳过
@@ -43,12 +33,12 @@ sudo apt-get install ttf-mscorefonts-installer
 ```
 
 
-### 6.重启下系统吧！(maybe不reboot也是可以的, 这一步可以先pass)
+### 5.重启下系统吧！(maybe不reboot也是可以的, 这一步可以先pass)
 
 ```sh
 sudo reboot
 ```
-### 7.pdf使用字体说明, css设置 font-family
+### 6.pdf使用字体说明, css设置 font-family
 
 ```css
 /*
@@ -58,5 +48,12 @@ sudo reboot
 .clazz {
     font-family:simsun;
 }
+```
+
+### 7.查看已经安装的中文字体
+
+```sh
+    # 查看所有安装的中文字体
+    fc-list :lang=zh
 ```
 
