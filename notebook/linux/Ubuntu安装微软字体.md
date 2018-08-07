@@ -1,7 +1,5 @@
 # Ubuntu安装微软字体
 
-> ## *此操作需要reboot服务器*
-
 ### 1.获得字体包 (copy from windows, 后缀是 *.ttc || *.ttf)
 
 ### 2.创建目录 将字体文件copy到下面的路径
@@ -45,9 +43,20 @@ sudo apt-get install ttf-mscorefonts-installer
 ```
 
 
-### 6.重启下系统吧！
+### 6.重启下系统吧！(maybe不reboot也是可以的, 这一步可以先pass)
 
 ```sh
 sudo reboot
+```
+### 7.pdf使用字体说明, css设置 font-family
+
+```css
+/*
+   simsun: 宋体;
+   Microsoft YaHei: 微软雅黑;
+*/
+.clazz {
+    font-family:simsun;
+}
 ```
 
