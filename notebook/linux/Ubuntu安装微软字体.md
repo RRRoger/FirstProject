@@ -1,6 +1,6 @@
 # Ubuntu安装微软字体
 
-### 1.获得字体包 (copy from windows, 后缀是 *.ttc || *.ttf)
+### 1.获得字体包 (copy from windows, 后缀是 *.ttc || *.ttf || *.otf)
 
 ### 2.创建目录 将字体文件copy到下面的路径
 
@@ -11,8 +11,7 @@ sudo mkdir /usr/share/fonts/truetype/windows-font
 ### 3.拷贝字体到wiondow-font目录下
 
 ```sh
-sudo cp ./*.ttf /usr/share/fonts/truetype/windows-font
-sudo cp ./*.ttc /usr/share/fonts/truetype/windows-font
+sudo cp ./* /usr/share/fonts/truetype/windows-font
 
 ```
 
@@ -68,5 +67,76 @@ sudo reboot
 ```sh
     # 查看所有安装的中文字体
     fc-list :lang=zh
+```
+
+```
+思源黑体 CN,Source Han Sans CN,Source Han Sans CN Heavy,思源黑体 CN Heavy:style=Heavy,Bold
+.苹方-繁,.蘋方-繁,.PingFang TC:style=细体,細體,Light
+.苹方-港,.蘋方-港,.PingFang HK:style=细体,細體,Light
+.苹方-简,.蘋方-簡,.PingFang SC:style=细体,細體,Light
+Microsoft JhengHei,微軟正黑體,微軟正黑體 Light,Microsoft JhengHei Light:style=Light,Regular
+文泉驿微米黑,文泉驛微米黑,WenQuanYi Micro Hei:style=Regular
+Microsoft JhengHei UI:style=Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
+Microsoft JhengHei,微軟正黑體:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
+微软雅黑,Microsoft YaHei,Microsoft YaHei Light,微软雅黑 Light:style=Light,Regular
+文泉驿正黑,文泉驛正黑,WenQuanYi Zen Hei:style=Regular
+文泉驿点阵正黑,文泉驛點陣正黑,WenQuanYi Zen Hei Sharp:style=Regular
+楷体,KaiTi:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
+宋体,SimSun:style=常规,Regular
+.苹方-港,.蘋方-港,.PingFang HK:style=纤细体,纖細體,Thin
+.苹方-简,.蘋方-簡,.PingFang SC:style=纤细体,纖細體,Thin
+等线,DengXian:style=Regular
+.苹方-繁,.蘋方-繁,.PingFang TC:style=纤细体,纖細體,Thin
+Microsoft YaHei UI,Microsoft YaHei UI Light:style=Light,Regular
+Microsoft YaHei UI:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
+苹方-繁,蘋方-繁,PingFang TC:style=中粗体,中粗體,Semibold
+苹方-简,蘋方-簡,PingFang SC:style=中粗体,中粗體,Semibold
+苹方-港,蘋方-港,PingFang HK:style=中粗体,中粗體,Semibold
+思源黑体 CN,Source Han Sans CN,Source Han Sans CN ExtraLight,思源黑体 CN ExtraLight:style=ExtraLight,Regular
+苹方-简,蘋方-簡,PingFang SC:style=常规体,標準體,Regular
+苹方-港,蘋方-港,PingFang HK:style=常规体,標準體,Regular
+苹方-简,蘋方-簡,PingFang SC:style=极细体,極細體,Ultralight
+苹方-港,蘋方-港,PingFang HK:style=极细体,極細體,Ultralight
+Microsoft JhengHei UI,Microsoft JhengHei UI Light:style=Light,Regular
+苹方-繁,蘋方-繁,PingFang TC:style=常规体,標準體,Regular
+苹方-繁,蘋方-繁,PingFang TC:style=极细体,極細體,Ultralight
+微软雅黑,Microsoft YaHei:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
+仿宋,FangSong:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
+思源黑体 CN,Source Han Sans CN,Source Han Sans CN Regular,思源黑体 CN Regular:style=Regular
+微软雅黑,Microsoft YaHei:style=Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
+.苹方-繁,.蘋方-繁,.PingFang TC:style=中黑体,中黑體,Medium
+苹方-繁,蘋方-繁,PingFang TC:style=细体,細體,Light
+等线,DengXian,DengXian Light,等线 Light:style=Light,Regular
+.苹方-简,.蘋方-簡,.PingFang SC:style=中黑体,中黑體,Medium
+.苹方-港,.蘋方-港,.PingFang HK:style=中黑体,中黑體,Medium
+苹方-港,蘋方-港,PingFang HK:style=细体,細體,Light
+苹方-简,蘋方-簡,PingFang SC:style=细体,細體,Light
+思源黑体 CN,Source Han Sans CN,Source Han Sans CN Medium,思源黑体 CN Medium:style=Medium,Regular
+.苹方-繁,.蘋方-繁,.PingFang TC:style=中粗体,中粗體,Semibold
+.苹方-简,.蘋方-簡,.PingFang SC:style=中粗体,中粗體,Semibold
+.苹方-港,.蘋方-港,.PingFang HK:style=中粗体,中粗體,Semibold
+文泉驿等宽正黑,文泉驛等寬正黑,WenQuanYi Zen Hei Mono:style=Regular
+文泉驿等宽微米黑,文泉驛等寬微米黑,WenQuanYi Micro Hei Mono:style=Regular
+苹方-繁,蘋方-繁,PingFang TC:style=中黑体,中黑體,Medium
+等线,DengXian:style=Bold
+苹方-简,蘋方-簡,PingFang SC:style=中黑体,中黑體,Medium
+苹方-港,蘋方-港,PingFang HK:style=中黑体,中黑體,Medium
+Microsoft JhengHei UI:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
+新宋体,NSimSun:style=常规,Regular
+思源黑体 CN,Source Han Sans CN,Source Han Sans CN Light,思源黑体 CN Light:style=Light,Regular
+Microsoft JhengHei,微軟正黑體:style=Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
+.苹方-简,.蘋方-簡,.PingFang SC:style=常规体,標準體,Regular
+.苹方-港,.蘋方-港,.PingFang HK:style=常规体,標準體,Regular
+.苹方-繁,.蘋方-繁,.PingFang TC:style=常规体,標準體,Regular
+.苹方-简,.蘋方-簡,.PingFang SC:style=极细体,極細體,Ultralight
+思源黑体 CN,Source Han Sans CN,Source Han Sans CN Bold,思源黑体 CN Bold:style=Bold
+.苹方-港,.蘋方-港,.PingFang HK:style=极细体,極細體,Ultralight
+.苹方-繁,.蘋方-繁,.PingFang TC:style=极细体,極細體,Ultralight
+Microsoft YaHei UI:style=Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
+苹方-港,蘋方-港,PingFang HK:style=纤细体,纖細體,Thin
+苹方-简,蘋方-簡,PingFang SC:style=纤细体,纖細體,Thin
+苹方-繁,蘋方-繁,PingFang TC:style=纤细体,纖細體,Thin
+思源黑体 CN,Source Han Sans CN,Source Han Sans CN Normal,思源黑体 CN Normal:style=Normal,Regular
+
 ```
 
