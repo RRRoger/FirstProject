@@ -4,20 +4,30 @@ FirstProject Code here
 
 # 笔记
 
-## 0x01.linux
+## 0x01 linux
 
 - [乱炖](notebook/linux/乱炖.md)
 - [Ubuntu安装微软字体](notebook/linux/Ubuntu安装微软字体.md)
 
 
-## 0x02.odoo
+## 0x02 odoo
 
 - [Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
 
 
-## 0x03.小程序
+## 0x03 小程序
 
 - [微信小程序支持多语言](notebook/weapp/微信小程序支持多语言.md)
 
+## 0x04 数据库
+
+- postgres
+ 1. [sql优化](notebook/database/sql优化.md)
+ 
+ 2. [数据库迁移](notebook/database/postgres/数据库迁移.md)
+
+## 0x05 rabbitmq
 
 
+- [安装](notebook/rabbitmq/安装mq.md)
+ 

@@ -1,6 +1,9 @@
 # Ubuntu安装微软字体
 
 ### 1.获得字体包 (copy from windows, 后缀是 *.ttc || *.ttf || *.otf)
+> windows 字体是 *.ttc  *.ttf
+
+> mac 字体是 *.otf
 
 ### 2.创建目录 将字体文件copy到下面的路径
 
