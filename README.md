@@ -13,6 +13,7 @@ FirstProject Code here
 ## 0x02 odoo
 
 - [Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
+- [Ubuntu14.04源码安装Odoo10社区版](notebook/odoo/Ubuntu14.04源码安装Odoo10社区版.md)
 
 
 ## 0x03 小程序
