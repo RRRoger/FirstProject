@@ -1,14 +1,14 @@
 # Ubuntu14.04源码安装Odoo10社区版
 
 ### 1、更新Ubuntu服务器软件源
-```sh
+```bash
 sudo apt-get update  #更新软件源  
 sudo apt-get dist-upgrade -y  #更新软件包，自动查找依赖关系  
 sudo shutdown -r now  #重启服务器，以更新改变的内容
 ```
 
 ### 2、新建系统用户用于运行Odoo程序
-```sh
+```bash
 cat /etc/passwd  #查看是否已经存在odoo用户
 sudo adduser --system --home=/home/odoo --group odoo  #新建系统用户odoo，指定home目录为/home/odoo
 ```
@@ -19,18 +19,18 @@ sudo adduser --system --home=/home/odoo --group odoo  #新建系统用户odoo，
 	<ui>
 		<li>sudo vim /etc/passwd</li>
 		<li>odoo那一行改成如下;可以用 sudo su odoo 进入odoo用户</li>
-		<li>odoo:x:111:117::/home/odoo:/bin/bash</li>
+		<li>/home/odoo:/bin/bash</li>
 	</ui>
 </div>
 
-```sh
+```bash
 sudo su - odoo -s /bin/bash  #将当前终端登录切换到odoo用户，并使用/bin/bash这个shell
 exit  #退出
 ```
 > 命令运行后会自动从当前目录切换到odoo用户的home目录/home/odoo。操作完毕后输入exit命令，离开odoo用户的shell，回到登录所用的用户。
 
 ### 3、下载最新版Odoo10源码
-```sh
+```bash
 sudo apt-get install -y git  #安装git软件
 sudo su - odoo -s /bin/bash #切换到odoo用户
 git clone -b 10.0 https://github.com/odoo/odoo.git  #下载Odoo10代码
@@ -42,7 +42,7 @@ sudo chmod -R 744 /home/odoo/odoo10 #修改读取、写入、执行权限
 ### 4、安装和配置数据库服务器PostgreSQL
 > 数据库默认用户名：postgres，没有密码
 
-```sh
+```bash
 sudo apt-get install -y postgresql #安装PostgreSQL
 sudo -u postgres createuser --createdb --no-createrole --no-superuser --pwprompt odoo #创建数据库用户odoo，输入两次密码odoo
 ```
@@ -51,7 +51,7 @@ sudo -u postgres createuser --createdb --no-createrole --no-superuser --pwprompt
 > odoo源码目录下的 requirements.txt 文件里面列出了 odoo10 依赖的所有 Python lib。
 因为lxml ldap psycopg2 需要使用gcc进行编译，所以需要先安装开发相关的库 libxml2, libxslt, libpq-dev, libldap2-dev, libsasl2-dev。
 
-```sh
+```bash
 sudo apt-get install -y python-dev libxml2-dev libxml2 libxslt-dev libpq-dev libldap2-dev libsasl2-dev libevent-dev  #安装开发相关的库
 sudo apt-get install -y libjpeg8-dev libpng12-dev libfreetype6-dev zlib1g-dev libwebp-dev libtiff5-dev libopenjpeg-dev libzip-dev  #安装Pillow依赖包
 sudo apt-get install -y python-babel python-dateutil python-decorator python-docutils python-feedparser python-imaging
@@ -74,7 +74,7 @@ sudo apt-get -f install  #强制安装依赖
 	</ui>
 </div>
 
-```sh
+```bash
 sudo wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb #下载wkhtmltopdf，注意根据操作系统选择相应版本
 sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb  #安装wkhtmltopdf  
 sudo apt-get -f install  #强制修复出现的依赖关系错误，清理上面安装过程中遇到的错误
@@ -87,7 +87,7 @@ wkhtmltopdf www.baidu.com baidu.pdf  #打印一个网页到当前目录，如果
 
 ### 6、安装nodejs、node-less
 
-```sh
+```bash
 sudo apt-get install -y nodejs node-less npm  #安装node.js  NPM  less
 sudo npm install -g less-plugin-clean-css  #使用 npm 安装 less-plugin-clean-css
 ```
@@ -95,7 +95,7 @@ sudo npm install -g less-plugin-clean-css  #使用 npm 安装 less-plugin-clean-
 ### 7、配置Odoo的启动文件
 > 用Ubuntu自带的nano编辑器在/etc/odoo/目录下创建odoo.conf文件。
 
-```sh
+```bash
 sudo mkdir /etc/odoo
 sudo vim /etc/odoo/odoo.conf
 ```
@@ -114,14 +114,14 @@ addons_path = /home/odoo/odoo10/odoo/addons,/home/odoo/odoo10/addons
 
 > 修改配置文件（/etc/odoo/odoo.conf）的权限
 
-```sh
+```bash
 sudo chown odoo: /etc/odoo/odoo.conf  #将所有权赋予odoo用户和用户组  
 sudo chmod 640 /etc/odoo/odoo.conf  #只允许odoo用户和root用户读取
 ```
 
 > 复制启动文件到/usr/bin/目录下，并尝试启动Odoo服务
 
-```sh
+```bash
 sudo cp /home/odoo/odoo10/setup/odoo /usr/bin/odoo  #复制启动文件到/usr/bin/目录下
 sudo chown odoo: /usr/bin/odoo  #修改文件所有者
 sudo chmod 755 /usr/bin/odoo  #增加执行权限
@@ -136,12 +136,12 @@ sudo su - odoo -s /bin/bash  #切换到odoo用户
 ### 8、配置启动脚本
 > 用Ubuntu自带的nano编辑器在/etc/init.d/目录下创建odoo启动脚本文件，然后把它改成可执行文件，赋给root用户。
 
-```sh
+```bash
 sudo vim /etc/init.d/odoo
 ```
 > 复制下面的内容到nano编辑器内
 
-```sh
+```bash
 #!/bin/bash
 ### BEGIN INIT INFO
 # Provides:          odoo
@@ -238,7 +238,7 @@ logrotate = True
 ```
 > 配置文件里指定了日志文件和附件的存储位置，因此要创建这个目录，同时还得让它能被odoo用户读写：
 
-```sh
+```bash
 sudo mkdir /var/lib/odoo  #新建附件存储目录
 sudo chown odoo: /var/lib/odoo  #修改所有者为odoo用户
 sudo chmod 744 /var/lib/odoo  #修改为odoo用户读取和写入
@@ -258,37 +258,37 @@ sudo chown odoo:root /var/log/odoo  #修改所有者为odoo用户
 </div>
 
 
-```sh
+```bash
 sudo /etc/init.d/odoo start  #或者sudo service odoo start
 ```
 
 > 查看odoo的日志判断是否启动成功
 
-```sh
+```bash
 tail -f /var/log/odoo/odoo-server.log
 ```
 
 > 检查odoo服务器是否可以被正常停止：
 
-```sh
+```bash
 sudo /etc/init.d/odoo stop  #或者sudo service odoo stop
 ```
 
 ### 9、将Odoo设为开机自启动
 > 让启动脚本随着Ubuntu服务器的开、关机而自动启动、关闭Odoo服务。
 
-```sh
+```bash
 sudo update-rc.d odoo defaults
 ```
 
 > 现在就可以重启你的服务器，当你再次登录服务器，Odoo应该已经在运行了。输入以下命令查看Odoo是否已在运行。
 
-```sh
+```bash
 ps -ef|grep odoo
 ```
 
 ### 10、用nginx代理odoo
-```sh
+```bash
 sudo apt-get  install nginx
 ```
 > 在/etc/nginx/sites-enabled 中增加一个可用的server
@@ -343,5 +343,6 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8’)
 ```
+
 
 
