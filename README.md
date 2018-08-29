@@ -2,22 +2,29 @@
 
 # 笔记
 
+## 0x00 琐碎
+
+* [关闭pad和iPhone来电同步](notebook/trivial/关闭pad和iPhone来电同步.md)
+
 ## 0x01 linux
 
-#### [乱炖](notebook/linux/乱炖.md)
-#### [Ubuntu安装微软字体](notebook/linux/Ubuntu安装微软字体.md)
+* [乱炖](notebook/linux/乱炖.md)
+
+* [Ubuntu安装微软字体](notebook/linux/Ubuntu安装微软字体.md)
 
 
 ## 0x02 odoo
 
-#### [Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
-#### [Ubuntu14.04源码安装Odoo10社区版](notebook/odoo/Ubuntu14.04源码安装Odoo10社区版.md)
-#### [[odoo]one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
+* [Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
+
+* [Ubuntu14.04源码安装Odoo10社区版](notebook/odoo/Ubuntu14.04源码安装Odoo10社区版.md)
+
+* [[odoo]one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
 
 
 ## 0x03 小程序
 
-#### [微信小程序支持多语言](notebook/weapp/微信小程序支持多语言.md)
+*  [微信小程序支持多语言](notebook/weapp/微信小程序支持多语言.md)
 
 ## 0x04 数据库
 
@@ -60,5 +67,3 @@
 ## 0x06 python2.x
 
 * [安装ipython 和 jupyter-notebook](notebook/python/安装ipython&jupyter-notebook(python2.x).md)
-
-
