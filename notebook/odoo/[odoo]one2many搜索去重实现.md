@@ -101,7 +101,12 @@ def name_search(self, name='', args=None, operator='ilike', limit=100):
 ### 3.在你需要实现去重的页面对应的o2m字段里面添加context
 
 ```
-<field name="obj_id" context="{'de-duplication':parent.line_ids, 'obj_name':'obj_name', 'field_name':'product_id'}"/>
+<!--
+     de-duplication: 是主档对应的字段
+     obj_name: 该明细的对象名
+     field_name: 当前字段名
+-->
+<field name="product_id" context="{'de-duplication':parent.line_ids, 'obj_name':'xx.products', 'field_name':'product_id'}"/>
 ```
 
 ### 4.代码里面去重是用not in实现, 对大数量级速度可能不太理想,不过没有个几百万记录都没什么感觉吧~~
