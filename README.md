@@ -5,6 +5,7 @@
 ## 0x00 琐碎
 
 * [关闭pad和iPhone来电同步](notebook/trivial/关闭pad和iPhone来电同步.md)
+* [Cut Music](py-music/readme.md)
 
 ## 0x01 linux
 
