@@ -22,6 +22,8 @@
 
 * [[odoo]one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
 
+* [[RPC]  Script](odoo_script/rpc-script/rpcodoo.py)
+
 
 ## 0x03 小程序
 
@@ -68,3 +70,4 @@
 ## 0x06 python2.x
 
 * [安装ipython 和 jupyter-notebook](notebook/python/安装ipython&jupyter-notebook(python2.x).md)
+* [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
