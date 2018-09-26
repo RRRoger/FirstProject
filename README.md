@@ -18,7 +18,7 @@
 
 * [Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
 
-* [Ubuntu14.04源码安装Odoo10社区版](notebook/odoo/Ubuntu14.04源码安装Odoo10社区版.md)
+* [Ubuntu源码安装Odoo10社区版](notebook/odoo/Ubuntu14.04源码安装Odoo10社区版.md)
 
 * [[odoo]one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
 
