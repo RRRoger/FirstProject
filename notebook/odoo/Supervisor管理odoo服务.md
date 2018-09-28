@@ -6,12 +6,17 @@ sudo easy_install supervisor
 ```
 ### 2.创建配置文件
 
+> ##### 如果报权限问题, 直接 `echo_supervisord_conf` 把输出的文本复制到新建的`supervisord.conf`文件下
+
 ```
 sudo mkdir /etc/supervisor
+sudo mkdir /etc/supervisor/config.d
 sudo echo_supervisord_conf > /etc/supervisor/supervisord.conf
 ```
 
 ### 3.修改配置文件,最后两行
+
+> ##### [include]前面的`;`也需要删掉
 
 ```
 [include]
@@ -24,16 +29,15 @@ files = /etc/supervisor/config.d/*.ini
 sudo mkdir /var/log/supervisor
 sudo touch /var/log/supervisor/odoo.log
 sudo touch /var/log/supervisor/odoo.error.log
-sudo mkdir /var/log/supervisor/config.d
 ```
 
 ### 5.创建进程管理文件(.ini)
 
 ```
-sudo vim /var/log/supervisor/config.d/odoo.ini
+sudo vim /etc/supervisor/config.d/odoo.ini
 ```
 
-- 将下面的文本贴进去, command可能需要调整
+> ##### 将下面的文本贴进去, command根据需要调整
 
 ```
 [program:odoo]
@@ -73,10 +77,13 @@ tail -f /tmp/supervisord.log # supervisor日志
 
 ```
 [inet_http_server]         ; inet (TCP) server disabled by default
-port=0.0.0.0:9001        ; ip_address:port specifier, *:port for all iface
-;username=user              ; default is no username (open server)
-;password=123               ; default is no password (open server)
+port=0.0.0.0:9001          ; ip_address:port specifier, *:port for all iface
+;username=user             ; default is no username (open server)
+;password=123              ; default is no password (open server)
 ```
+
+
+
 - 右击检查发现restart对应是一个url 那么我们可以用get请求去restart odoo的服务, 不用登录服务器, 直接在本地用命令就可以重启服务啦
 
 ```
