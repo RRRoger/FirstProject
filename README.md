@@ -55,6 +55,8 @@
 
 * [[权限]修改数据库用户](notebook/database/postgres/[权限]修改数据库用户.md)
 
+* [数据库备份恢复](notebook/database/postgres/数据库备份恢复.md)
+
 ### 2.oracle
 
 * [cx_Oracle安装](notebook/database/oracle/cx_Oracle安装.md)
