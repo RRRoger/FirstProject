@@ -24,6 +24,8 @@
 
 * [[RPC]  Script](odoo_script/rpc-script/rpcodoo.py)
 
+* [[TreeView]添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button)
+
 
 ## 0x03 小程序
 
