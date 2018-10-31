@@ -5,7 +5,10 @@
 ## 0x00 琐碎
 
 * [关闭pad和iPhone来电同步](notebook/trivial/关闭pad和iPhone来电同步.md)
+
 * [Cut Music](py-music/readme.md)
+
+* [搜狗输入法自定义短语](other_script/sougou_input/phrases.ini)
 
 ## 0x01 linux
 
