@@ -12,7 +12,7 @@
 ### 1.在所在的模块新增一个py文件, 将下面的代码复制到里面
 > 如: [search_enhance.py](../../odoo_script/search_enhance.py)
 
-```
+```python
 # -*- coding: utf-8 -*-
 import logging
 _logger = logging.getLogger(__name__)
@@ -82,7 +82,7 @@ def get_search_args(args, env, context):
 
 ### 2.在要实现的对象里面重写search 和 name_search方法
 
-```
+```python
 # import 上面的代码
 from search_enhance import get_search_args
 
@@ -100,7 +100,7 @@ def name_search(self, name='', args=None, operator='ilike', limit=100):
 
 ### 3.在你需要实现去重的页面对应的o2m字段里面添加context
 
-```
+```xml
 <!--
      de-duplication: 是主档对应的字段
      obj_name: 该明细的对象名
