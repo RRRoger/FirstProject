@@ -45,15 +45,15 @@ def cut_music(source_path, dest_path, start=False, end=False):
     sound_cut.export(dest_path, format="mp3")
     return "OK"
 
-source_path = "/Users/chenpeng/Desktop/whoever.mp3"
-dest_path = "/Users/chenpeng/Desktop/whoever2.mp3"
+source_path = "/Users/chenpeng/Desktop/小了白了兔.mp3"
+dest_path = "/Users/chenpeng/Desktop/小了白了兔new.mp3"
 
 end = False
 start = False
 
 # from 00:05 to 00:43
 
-start = "00:05"
-end = "00:43"
+start = "00:00"
+end = "00:20"
 
 cut_music(source_path, dest_path, start, end)
