@@ -2,11 +2,11 @@
 import smtplib  # 加载smtplib模块
 from email.mime.text import MIMEText
 from email.utils import formataddr
+
 """
     发邮件的方法, 支持发多个人, 支持html和纯文本格式
     author: Roger
 """
-
 
 SMTP_IP = 'smtp.163.com'  # 邮箱服务器
 SMTP_PORT = 25  # 端口
@@ -83,5 +83,6 @@ def send_mail():
         print 'OK'
     else:
         print 'FAIL'
+
 
 send_mail()
