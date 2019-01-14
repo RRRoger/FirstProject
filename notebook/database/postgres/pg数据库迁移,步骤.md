@@ -17,12 +17,15 @@ data_directory = '/data/postgresql/9.3/main'
 ```
 
 ### 2.把默认数据目录的东西拷贝过来
+
 ```sh
 cd /data
 mkdir postgresql
 cp -r /var/lib/postgresql/* /data/postgresql/
 ```
+
 ### 3.修改data_directory的所有者
+
 > (记得 -R )
 
 ```sh
