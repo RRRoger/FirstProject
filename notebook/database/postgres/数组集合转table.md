@@ -1,6 +1,6 @@
 # [unnest]数组集合转table
 
-```
+```sql
 SELECT unnest(array[ '215', '216', '218']) product_code
 ```
 
