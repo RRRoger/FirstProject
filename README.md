@@ -22,9 +22,9 @@
 
 * [Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
 * [Ubuntu源码安装Odoo10社区版](notebook/odoo/Ubuntu14.04源码安装Odoo10社区版.md)
-* [[odoo]one2many搜索去重实现](notebook/odoo/one2many搜索去重实现.md)
-* [[RPC]  Script](odoo_script/rpc-script/rpcodoo.py)
-* [[TreeView]添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button)
+* [one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
+* [Script](odoo_script/rpc-script/rpcodoo.py)
+* [添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button)
 
 
 ## 0x03 小程序
@@ -38,14 +38,14 @@
 * [sql优化](notebook/database/sql优化.md)
 * [数据库迁移](notebook/database/postgres/数据库迁移.md)
 * [数据库死锁查询](notebook/database/postgres/数据库死锁查询.md)
-* [[unnest]数组集合转table](notebook/database/postgres/数组集合转table.md)
-* [[远程]允许远程访问配置修改](notebook/database/postgres/允许远程访问配置修改.md)
-* [[升级]数据库升级](notebook/database/postgres/数据库升级.md)
-* [[迁移]pg数据库迁移,步骤](notebook/database/postgres/pg数据库迁移,步骤.md)
-* [[空间]看数据库大小等](notebook/database/postgres/看数据库大小等.md)
-* [[加密]数据库文件](notebook/database/postgres/数据库文件.md)
-* [[递归]可能会用到](notebook/database/postgres/可能会用到.md)
-* [[权限]修改数据库用户](notebook/database/postgres/修改数据库用户.md)
+* [unnest-数组集合转table](notebook/database/postgres/数组集合转table.md)
+* [远程-允许远程访问配置修改](notebook/database/postgres/允许远程访问配置修改.md)
+* [升级-数据库升级](notebook/database/postgres/数据库升级.md)
+* [迁移-pg数据库迁移,步骤](notebook/database/postgres/pg数据库迁移,步骤.md)
+* [空间-看数据库大小等](notebook/database/postgres/看数据库大小等.md)
+* [加密-数据库文件](notebook/database/postgres/数据库文件.md)
+* [递归-可能会用到](notebook/database/postgres/可能会用到.md)
+* [权限-修改数据库用户](notebook/database/postgres/修改数据库用户.md)
 * [数据库备份恢复](notebook/database/postgres/数据库备份恢复.md)
 
 ### 2.oracle
