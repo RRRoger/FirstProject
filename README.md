@@ -12,6 +12,7 @@
 * [Cut Music](py-music/readme.md)
 * [搜狗输入法自定义短语](https://gist.github.com/RRRoger/0235138d3ac53357007a864fc4901734)
 * [linux和win定时任务实现](notebook/trivial/linux和win定时任务实现.md)
+* [换源整合](notebook/trivial/换源整合.md)
 
 ## 0x01 linux
 
