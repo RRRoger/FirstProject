@@ -40,7 +40,7 @@
 * [sql优化](notebook/database/sql优化.md)
 * [数据库迁移](notebook/database/postgres/数据库迁移.md)
 * [数据库死锁查询](notebook/database/postgres/数据库死锁查询.md)
-* [unnest-数组集合转table](notebook/database/postgres/数组集合转table.md)
+* [unnest - 数组集合转table](notebook/database/postgres/数组集合转table.md)
 * [远程 - 允许远程访问配置修改](notebook/database/postgres/允许远程访问配置修改.md)
 * [升级 - 数据库升级](notebook/database/postgres/数据库升级.md)
 * [迁移 - pg数据库迁移,步骤](notebook/database/postgres/pg数据库迁移,步骤.md)

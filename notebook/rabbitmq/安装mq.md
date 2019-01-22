@@ -1,4 +1,4 @@
-## 安装rabbitmq
+# 安装rabbitmq
 
 ### 1.官网下载rabbitmq-server-3.6.3
 
