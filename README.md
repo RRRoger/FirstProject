@@ -11,6 +11,7 @@
 * [换源整合](notebook/trivial/换源整合.md)
 * [该不该提前还贷？
 ](https://www.v2ex.com/t/531921)
+* [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)
 
 ## 0x01 linux
 
