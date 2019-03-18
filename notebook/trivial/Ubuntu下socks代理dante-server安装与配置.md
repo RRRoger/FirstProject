@@ -26,8 +26,8 @@ user.privileged: proxy
 user.notprivileged: nobody
 user.libwrap: nobody
 client pass {
-from: 0.0.0.0/0 to: 0.0.0.0/0
-	log: connect disconnect
+    from: 0.0.0.0/0 to: 0.0.0.0/0
+    log: connect disconnect
 }
 pass {
     from: 0.0.0.0/0 to: 0.0.0.0/0 port gt 1023
