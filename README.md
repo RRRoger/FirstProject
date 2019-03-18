@@ -12,6 +12,9 @@
 * [该不该提前还贷？
 ](https://www.v2ex.com/t/531921)
 * [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)
+* [Ubuntu下socks代理dante-server安装与配置](notebook/trivial/Ubuntu下socks代理dante-server安装与配置.md)
+* [Proxifier：Mac OS给某个单独应用配置代理上网服务
+](notebook/trivial/Proxifier使用.md)
 
 ## 0x01 linux
 
