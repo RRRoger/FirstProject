@@ -51,15 +51,19 @@ block {
 mkdir /var/log/sockd
 ```
 
+## 4. 启动
 
+```bash
+/etc/init.d/danted start
+```
 
-## 4. 检测是否启动成功
+## 5. 检测是否启动成功
 
 ```
 netstat -lnp | grep 1080
 ```
 
-## 5. 用户连接后查看连接情况
+## 6. 用户连接后查看连接情况
 
 ```
 netstat -anp | grep 1080

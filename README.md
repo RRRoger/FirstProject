@@ -68,3 +68,7 @@
 
 * [安装ipython 和 jupyter-notebook](notebook/python/安装ipython&jupyter-notebook-python2.md)
 * [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
+
+## 0x07 Script
+
+- [进制转化](notebook/trivial/进制转换.md)
