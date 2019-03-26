@@ -32,3 +32,16 @@ def baseNto10(s, n=36):
         res += chars.index(char) * (n ** depth)
         depth += 1
     return res
+
+
+# J = 36
+# number = 678123
+
+# num_char = base10toN(number, J)
+# new_num = baseNto10(num_char, J)
+
+# print "origin number", number
+# print "number char", num_char
+# print "number after converse", new_num
+
+
