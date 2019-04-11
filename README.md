@@ -4,6 +4,7 @@
 
 ## 0x00 琐碎
 
+* [Roger's Gist](https://gist.github.com/RRRoger)
 * [什么是递归?](notebook/trivial/recursion.md)
 * [关闭pad和iPhone来电同步](notebook/trivial/关闭pad和iPhone来电同步.md)
 * [Cut Music](py-music/readme.md)
@@ -14,8 +15,7 @@
 * [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)
 * [Ubuntu下socks代理dante-server安装与配置](notebook/trivial/Ubuntu下socks代理dante-server安装与配置.md)
 * [Ubuntu下socks代理dante-server安装与配置[Use Docker]](https://github.com/wernight/docker-dante)
-* [Proxifier：Mac OS给某个单独应用配置代理上网服务
-](notebook/trivial/Proxifier使用.md)
+* [Proxifier：Mac OS给某个单独应用配置代理上网服务](notebook/trivial/Proxifier使用.md)
 
 ## 0x01 linux
 
