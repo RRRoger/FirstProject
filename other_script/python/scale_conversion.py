@@ -34,14 +34,26 @@ def baseNto10(s, n=36):
     return res
 
 
-# J = 36
-# number = 678123
 
-# num_char = base10toN(number, J)
-# new_num = baseNto10(num_char, J)
+if __name__ == '__main__':
+    J = 36
+    number = 2019032700001
 
-# print "origin number", number
-# print "number char", num_char
-# print "number after converse", new_num
+    num_char = base10toN(number, J)
+    new_num = baseNto10(num_char, J)
+
+    print "origin number", number
+    print "number char", num_char
+    print "number after converse", new_num
+
+# 0PR2KKCWX
+# 0PR2KMI2F
+# 0PUAC8SMV
+# 0PU9SPS01
+# 0D2VMJ9Q9
+# 0CRE66I9S
+# 3JLXPT2PS
+# 3JLXPT2PR
+
 
 

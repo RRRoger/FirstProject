@@ -10,8 +10,7 @@
 * [搜狗输入法自定义短语](https://gist.github.com/RRRoger/0235138d3ac53357007a864fc4901734)
 * [linux和win定时任务实现](notebook/trivial/linux和win定时任务实现.md)
 * [换源整合](notebook/trivial/换源整合.md)
-* [该不该提前还贷？
-](https://www.v2ex.com/t/531921)
+* [该不该提前还贷？](https://www.v2ex.com/t/531921)
 * [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)
 * [Ubuntu下socks代理dante-server安装与配置](notebook/trivial/Ubuntu下socks代理dante-server安装与配置.md)
 * [Ubuntu下socks代理dante-server安装与配置[Use Docker]](https://github.com/wernight/docker-dante)
@@ -53,6 +52,7 @@
 * [递归 - 可能会用到](notebook/database/postgres/可能会用到.md)
 * [权限 - 修改数据库用户](notebook/database/postgres/修改数据库用户.md)
 * [数据库备份恢复](notebook/database/postgres/数据库备份恢复.md)
+* [字符串常用函数](notebook/database/postgres/字符串常用函数.md)
 
 ### 2.oracle
 
