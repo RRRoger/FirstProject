@@ -28,9 +28,8 @@
 * [Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
 * [Ubuntu源码安装Odoo10社区版](notebook/odoo/Ubuntu14.04源码安装Odoo10社区版.md)
 * [one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
-* [Script](odoo_script/rpc-script/rpcodoo.py)
 * [添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button/readme.md)
-
+* [xmlrpc Call Odoo Server](https://github.com/RRRoger/odoo_addons/tree/master/odoo_xmlrpc/README.md)
 
 ## 0x03 小程序
 
