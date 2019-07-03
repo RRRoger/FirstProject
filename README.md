@@ -30,6 +30,7 @@
 * [one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
 * [添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button/readme.md)
 * [xmlrpc Call Odoo Server](https://github.com/RRRoger/odoo_addons/tree/master/odoo_xmlrpc/README.md)
+* [Data Analysis Report](https://github.com/RRRoger/odoo_addons/tree/master/hs_query)
 
 ## 0x03 小程序
 
