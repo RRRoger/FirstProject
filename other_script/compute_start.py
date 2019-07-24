@@ -24,4 +24,4 @@ def _get_stars(date):
         res = star_key[month][1]
     return res
 
-print _get_stars('03-31')
+print _get_stars('10-26')

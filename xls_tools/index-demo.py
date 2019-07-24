@@ -21,7 +21,7 @@ HEADERS = [
 HEADERS = sorted(HEADERS, key=lambda x: x['seq'])
 excel_data = format_data(HEADERS, DATA)
 base64_data = excel_data_getter(u'主数据', excel_data)
-file_name = FILE_NAME + '-' + datetime.datetime.utcnow().strftime('%Y%m%d%H%M%S') + '.xls'
+file_name = FILE_NAME + '-' + datetime.datetime.utcnow().strftime('%Y%m%d%H%M%S') + '.xlsx'
 full_path = save_file(FULL_DIR, file_name, base64_data)
 print '生成excel, 路径:', full_path
 

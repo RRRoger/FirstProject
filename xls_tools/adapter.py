@@ -1,19 +1,113 @@
-# -*- encoding: utf-8 -*-
-import datetime
+# coding: utf-8
+
+try:
+    import openpyxl
+except ImportError:
+    openpyxl = None
+
+try:
+    import xlsxwriter
+except ImportError:
+    xlsxwriter = None
+
 try:
     import xlwt
 except ImportError:
     xlwt = None
+
 from cStringIO import StringIO
 import os
 
-def excel_data_getter(file_name, excel_data):
+
+def save_excel(name, excel_data, full_dir, sheet2name=None, sheet2data=None):
+    """
+        在本地生成excel临时文件, 返回路径待上传
+        sheet2name & sheet2data 用来记录报表查询的条件
+    """
+    wb = openpyxl.Workbook()
+    # 激活 worksheet
+    ws = wb.active
+    ws.title = name
+    # 可以附加行，从第一列开始附加
+    for r in excel_data:
+        ws.append(r)
+    ws2 = wb.create_sheet(title=sheet2name)
+    for r in sheet2data:
+        ws2.append(r)
+
+    # 保存文件
+    path = full_dir + '/' + name + '.xlsx'
+    wb.save(path)
+    return path
+
+
+def _excel_data_getter_for_openpyxl(name, excel_data, sheet2name=None, sheet2data=None):
+    """
+        在本地生成excel临时文件, 返回路径待上传
+        sheet2name & sheet2data 用来记录报表查询的条件
+    """
+    wb = openpyxl.Workbook()
+    # 激活 worksheet
+    ws = wb.active
+    ws.title = name
+    # 可以附加行，从第一列开始附加
+    for r in excel_data:
+        ws.append(r)
+
+    if sheet2data:
+        ws2 = wb.create_sheet(title=sheet2name)
+        for r in sheet2data:
+            ws2.append(r)
+
+    fp = StringIO()
+    wb.save(fp)
+    fp.seek(0)
+    data = fp.read()
+    fp.close()
+    return data
+
+
+def _excel_data_getter_for_xlsxwriter(name, excel_data, sheet2name=None, sheet2data=None):
+    """
+        在本地生成excel临时文件, 返回路径待上传
+        sheet2name & sheet2data 用来记录报表查询的条件
+    """
+
+    title_dict = {'font_name': u'微软雅黑', 'font_size': 12, 'align': 'centre', 'bg_color': "#C8C8C8"}
+    row_dict = {'font_name': u'微软雅黑', 'font_size': 10}
+
+    xls = StringIO()
+    wb = xlsxwriter.Workbook(xls)
+    worksheet = wb.add_worksheet(name)
+    title_style = wb.add_format(title_dict)
+    row_style = wb.add_format(row_dict)
+    _row = 0
+    for r in excel_data:
+        worksheet.write_row(_row, 0, r, title_style if _row == 0 else row_style)
+        _row += 1
+
+    if sheet2data:
+        worksheet2 = wb.add_worksheet(sheet2name)
+        title_style = wb.add_format(title_dict)
+        title_style.set_border(1)
+        _row = 0
+        for r in sheet2data:
+            worksheet2.write_row(_row, 0, r, title_style if _row == 0 else row_style)
+            _row += 1
+
+    wb.close()
+    xls.seek(0)
+    data = xls.getvalue()
+    return data
+
+
+def _excel_data_getter_for_xlwt(name, excel_data, sheet2name=None, sheet2data=None):
     """
         在本地生成excel临时文件, 返回路径待上传
         sheet2name & sheet2data 用来记录报表查询的条件
     """
     workbook = xlwt.Workbook(encoding='utf-8')
-    worksheet = workbook.add_sheet(file_name)
+    worksheet = workbook.add_sheet(name)
 
     # header style
     header_style = xlwt.easyxf('pattern: pattern solid;')
@@ -75,11 +169,36 @@ def excel_data_getter(file_name, excel_data):
 
             if excel_data[r][c] is None:
                 worksheet.write(r, c, None, style)
-            elif isinstance(excel_data[r][c], (int, long, float, complex, unicode)):
+            elif isinstance(excel_data[r][c], (int, long, float, complex)):
                 worksheet.write(r, c, excel_data[r][c], style)
             else:
-                worksheet.write(r, c, str(excel_data[r][c]), style)
+                worksheet.write(r, c, '%s' % excel_data[r][c], style)
 
+    if sheet2name and sheet2data:
+        # sheet2 添加, 此处是为了在excel里面添加查询时候的条件
+        worksheet2 = workbook.add_sheet(sheet2name)
+        for r in range(len(sheet2data)):  # row
+            style = normal_style
+            flag = 'normal'  # normal, group_no_start, group_start
+            if r >= 1:
+                flag = 'group_no_start'
+            elif r == 0:
+                style = header_style
+
+            for c in range(len(sheet2data[r])):  # column
+
+                if flag == 'group_no_start':
+
+                    if sheet2data[r][c] is not None:
+                        flag = 'group_start'
+                        style = group_style
+
+                if sheet2data[r][c] is None:
+                    worksheet2.write(r, c, None, style)
+                elif isinstance(sheet2data[r][c], (int, long, float, complex)):
+                    worksheet2.write(r, c, sheet2data[r][c], style)
+                else:
+                    worksheet2.write(r, c, '%s' % sheet2data[r][c], style)
 
     fp = StringIO()
     workbook.save(fp)
@@ -87,23 +206,6 @@ def excel_data_getter(file_name, excel_data):
     data = fp.read()
     fp.close()
     return data
-
-
-
-def save_file(full_dir, file_name, base64_data):
-    # 保存文件 临时文件
-    full_path = os.path.join(full_dir, file_name)
-    if not os.path.exists(full_dir):
-        os.makedirs(full_dir)
-    with open(full_path, 'w') as f:
-        f.write(base64_data)
-    return full_path
-
-
-def remove_file(full_path):
-    # 删除文件 临时文件
-    os.remove(full_path)
-    return True
 
 
 def format_data(headers, data, context=None):
@@ -123,8 +225,6 @@ def format_data(headers, data, context=None):
             sum_index.append(_index)
         elif header['group'] == 'avg':
             avg_index.append(_index)
-        else:
-            pass  # other case todo
         _index += 1
     values = []
     for s in data:
@@ -145,3 +245,28 @@ def format_data(headers, data, context=None):
             print last_line
             values.append(last_line)
     return [header_keys] + values
+
+
+def save_file(full_dir, file_name, base64_data):
+    # 保存文件 临时文件
+    full_path = os.path.join(full_dir, file_name)
+    if not os.path.exists(full_dir):
+        os.makedirs(full_dir)
+    with open(full_path, 'w') as f:
+        f.write(base64_data)
+    return full_path
+
+
+def remove_file(full_path):
+    # 删除文件 临时文件
+    os.remove(full_path)
+    return True
+
+
+excel_data_getter = _excel_data_getter_for_xlsxwriter
+
+
+# for lib in LIB_LIST:
+#     if eval(lib):
+#         excel_data_getter = eval("_excel_data_getter_for_" + lib)
+#         break
