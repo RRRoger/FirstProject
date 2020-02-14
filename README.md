@@ -74,3 +74,10 @@
 ## 0x07 Script
 
 - [进制转化](notebook/trivial/进制转换.md)
+
+## 0X08 视频剪辑笔记
+
+- [Final_Cut_Pro_Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
+- [PS_Tips](notebook/视频剪辑笔记/PS_Tips.md)
+
+
