@@ -7,6 +7,7 @@
 * [Roger's Gist](https://gist.github.com/RRRoger)
 * [什么是递归?](notebook/trivial/recursion.md)
 * [关闭pad和iPhone来电同步](notebook/trivial/关闭pad和iPhone来电同步.md)
+* [mac os 之间屏幕共享](notebook/trivial/macos之间屏幕共享.md)
 * [Cut Music](py-music/readme.md)
 * [搜狗输入法自定义短语](https://gist.github.com/RRRoger/0235138d3ac53357007a864fc4901734)
 * [linux和win定时任务实现](notebook/trivial/linux和win定时任务实现.md)
