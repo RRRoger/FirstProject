@@ -9,7 +9,7 @@
 * [关闭pad和iPhone来电同步](notebook/trivial/关闭pad和iPhone来电同步.md)
 * [mac os 之间屏幕共享](notebook/trivial/macos之间屏幕共享.md)
 * [Cut Music](py-music/readme.md)
-* [搜狗输入法自定义短语](https://gist.github.com/RRRoger/0235138d3ac53357007a864fc4901734)
+* [搜狗输入法自定义短语](other_script/sougou_input/phrases.ini)
 * [linux和win定时任务实现](notebook/trivial/linux和win定时任务实现.md)
 * [换源整合](notebook/trivial/换源整合.md)
 * [该不该提前还贷？](https://www.v2ex.com/t/531921)
