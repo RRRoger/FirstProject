@@ -8,12 +8,14 @@
 - 提供36转10进制func
 """
 
+CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
 
 def base10toN(num, n=36):
     """
         十进制 -> N进制
     """
-    chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    chars = CHARS
     res = ''
     current = num
     while current != 0:
@@ -26,7 +28,7 @@ def baseNto10(s, n=36):
     """
         N进制 -> 十进制
     """
-    chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    chars = CHARS
     depth = res = 0
     for char in s[::-1]:
         res += chars.index(char) * (n ** depth)
@@ -37,7 +39,7 @@ def baseNto10(s, n=36):
 
 if __name__ == '__main__':
     J = 36
-    number = 2019032700001
+    number = 10000
 
     num_char = base10toN(number, J)
     new_num = baseNto10(num_char, J)
