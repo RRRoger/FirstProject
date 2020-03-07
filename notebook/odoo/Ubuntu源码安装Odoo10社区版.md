@@ -10,17 +10,22 @@
 > 6. apt 换源
 
 
-### 1、更新Ubuntu服务器软件源(*pass 这步可以不做*)
+### 1、* (*pass 这步可以不做*) 更新Ubuntu服务器软件源
 ```bash
-sudo apt-get update  #更新软件源  
-sudo apt-get dist-upgrade -y  #更新软件包，自动查找依赖关系  
-sudo shutdown -r now  #重启服务器，以更新改变的内容
+# 更新软件源 
+sudo apt-get update 
+# 更新软件包，自动查找依赖关系  
+sudo apt-get dist-upgrade -y
+# 重启服务器，以更新改变的内容
+sudo shutdown -r now
 ```
 
 ### 2、新建系统用户用于运行Odoo程序
 ```bash
-cat /etc/passwd  #查看是否已经存在odoo用户
-sudo adduser --system --home=/home/odoo --group odoo  #新建系统用户odoo，指定home目录为/home/odoo
+# 查看是否已经存在odoo用户
+cat /etc/passwd
+# 新建系统用户odoo，指定home目录为/home/odoo
+sudo adduser --system --home=/home/odoo --group odoo
 ```
 
 > 系统用户不能用于登录并且没有shell，但当需要以它的身份进行特定操作时，可以用su命令切换用户：
@@ -50,20 +55,22 @@ exit  #退出
 
 
 ```bash
-sudo apt-get install -y git  # 安装git软件
-sudo su odoo # 切换到odoo用户
-git clone -b 10.0 https://github.com/odoo/odoo.git  # 下载Odoo10代码
-mv odoo odoo10  # 修改文件夹名称为odoo10
-exit #退出odoo用户  
-sudo chmod -R 774 /home/odoo/odoo10 # 修改读取、写入、执行权限
-```
-
-```bash
+# 安装git软件
 sudo apt-get install -y git
+
+# 切换到odoo用户
 sudo su odoo
+
+# 下载Odoo10代码
 git clone -b 10.0 https://github.com/odoo/odoo.git
+
+# 修改文件夹名称为odoo10
 mv odoo odoo10
+
+#退出odoo用户  
 exit
+
+# 修改读取、写入、执行权限
 sudo chmod -R 774 /home/odoo/odoo10
 ```
 
@@ -71,12 +78,10 @@ sudo chmod -R 774 /home/odoo/odoo10
 > 数据库默认用户名：postgres，没有密码
 
 ```bash
-sudo apt-get install -y postgresql #安装PostgreSQL
-sudo -u postgres createuser --createdb --no-createrole --no-superuser --pwprompt odoo #创建数据库用户odoo，输入两次密码odoo
-```
-
-```bash
+#安装PostgreSQL
 sudo apt-get install -y postgresql
+
+#创建数据库用户odoo，输入两次密码odoo
 sudo -u postgres createuser --createdb --no-createrole --no-superuser --pwprompt odoo
 ```
 
@@ -92,28 +97,29 @@ sudo -u postgres createuser --createdb --no-createrole --no-superuser --pwprompt
 因为lxml ldap psycopg2 需要使用gcc进行编译，所以需要先安装开发相关的库 libxml2, libxslt, libpq-dev, libldap2-dev, libsasl2-dev。
 
 ```bash
-sudo apt-get install -y python-dev libxml2-dev libxml2 libxslt-dev libpq-dev libldap2-dev libsasl2-dev libevent-dev  #安装开发相关的库
-sudo apt-get install -y libjpeg8-dev libpng12-dev libfreetype6-dev zlib1g-dev libwebp-dev libtiff5-dev libopenjpeg-dev libzip-dev  #安装Pillow依赖包
-sudo apt-get install -y python-babel python-dateutil python-decorator python-docutils python-feedparser python-imaging
-sudo apt-get install -y python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid
-sudo apt-get install -y python-passlib python-psutil python-psycopg2 python-pychart python-pydot python-pyparsing
-sudo apt-get install -y python-pypdf python-reportlab python-requests python-suds python-tz python-vatnumber python-vobject
-sudo apt-get install -y python-werkzeug python-xlsxwriter python-xlwt python-yaml python-gevent
-sudo apt-get install -y python-pip #安装pip，如果系统未安装
-sudo pip install -r /home/odoo/odoo10/requirements.txt #使用 pip 安装 odoo-10 依赖的 Python 库
-sudo apt-get -f install  #强制安装依赖
-```
-
-```bash
+# 安装开发相关的库
 sudo apt-get install -y python-dev libxml2-dev libxml2 libxslt-dev libpq-dev libldap2-dev libsasl2-dev libevent-dev
+
+# 安装Pillow依赖包
 sudo apt-get install -y libjpeg8-dev libpng12-dev libfreetype6-dev zlib1g-dev libwebp-dev libtiff5-dev libopenjpeg-dev libzip-dev
+
 sudo apt-get install -y python-babel python-dateutil python-decorator python-docutils python-feedparser python-imaging
+
 sudo apt-get install -y python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid
+
 sudo apt-get install -y python-passlib python-psutil python-psycopg2 python-pychart python-pydot python-pyparsing
+
 sudo apt-get install -y python-pypdf python-reportlab python-requests python-suds python-tz python-vatnumber python-vobject
+
 sudo apt-get install -y python-werkzeug python-xlsxwriter python-xlwt python-yaml python-gevent
+
+# 安装pip，如果系统未安装
 sudo apt-get install -y python-pip
+
+# 使用 pip 安装 odoo-10 依赖的 Python 库
 sudo pip install -r /home/odoo/odoo10/requirements.txt
+
+# 强制安装依赖
 sudo apt-get -f install
 ```
 
@@ -128,24 +134,28 @@ sudo apt-get -f install
 </div>
 
 ```bash
-sudo wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb #下载wkhtmltopdf，注意根据操作系统选择相应版本
-sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb  #安装wkhtmltopdf  
-sudo apt-get -f install  #强制修复出现的依赖关系错误，清理上面安装过程中遇到的错误
-sudo cp /usr/local/bin/wkhtmltopdf /usr/bin/wkhtmltopdf  #安装完成后将可执行文件复制到usr/bin中
-sudo chown root:root /usr/bin/wkhtmltopdf  #更改所有者为root用户
-sudo chmod +x /usr/bin/wkhtmltopdf  #并增加可执行属性
-sudo apt-get install -y ttf-wqy-zenhei ttf-wqy-microhei  #安装中文字体
-wkhtmltopdf www.baidu.com baidu.pdf  #打印一个网页到当前目录，如果成功生成pdf则表明安装成功
-```
-
-```bash
+# 下载wkhtmltopdf，注意根据操作系统选择相应版本
 sudo wget http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
+
+# 安装wkhtmltopdf  
 sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
+
+# 强制修复出现的依赖关系错误，清理上面安装过程中遇到的错误
 sudo apt-get -f install
+
+# 安装完成后将可执行文件复制到usr/bin中
 sudo cp /usr/local/bin/wkhtmltopdf /usr/bin/wkhtmltopdf
+
+# 更改所有者为root用户
 sudo chown root:root /usr/bin/wkhtmltopdf
+
+# 并增加可执行属性
 sudo chmod +x /usr/bin/wkhtmltopdf
+
+# 安装中文字体
 sudo apt-get install -y ttf-wqy-zenhei ttf-wqy-microhei
+
+# 打印一个网页到当前目录，如果成功生成pdf则表明安装成功
 wkhtmltopdf www.baidu.com baidu.pdf
 ```
 
@@ -305,22 +315,12 @@ logrotate = True
 
 > 配置文件里指定了日志文件和附件的存储位置，因此要创建这个目录，同时还得让它能被odoo用户读写：
 
-<!--
 ```bash
 sudo mkdir /var/lib/odoo  #新建附件存储目录
 sudo chown odoo: /var/lib/odoo  #修改所有者为odoo用户
 sudo chmod 774 /var/lib/odoo  #修改为odoo用户读取和写入
 sudo mkdir /var/log/odoo  #新建日志存储目录
 sudo chown odoo:root /var/log/odoo  #修改所有者为odoo用户
-```
--->
-
-```bash
-sudo mkdir /var/lib/odoo
-sudo chown odoo: /var/lib/odoo
-sudo chmod 774 /var/lib/odoo
-sudo mkdir /var/log/odoo
-sudo chown odoo:root /var/log/odoo
 ```
 
 > 启动odoo服务
@@ -384,30 +384,6 @@ server{
 ```
 
 > 把 /etc/nginx/sites-enabled/default 里面80注释或者改成其他端口
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
 
 ---
 
@@ -478,44 +454,44 @@ sudo chown -R user:user /home/ubuntu/DIR
 
 - 1. 备份
 
-  ```
-  pg_dump --format=c db_name > dest_path
-  ```
+```
+pg_dump --format=c db_name > dest_path
+```
 
 - 2. 恢复
 
-  ```bash
-  # 在终端直接执行
-  dropdb DB_name
-  createdb -T template0 DB_name
-  pg_restore -d DB_name /Users/chenpeng/Desktop/xxx.dmp ## 还原二进制文件
-  
-  # 在postgres环境里执行
-  # 还原文本文件 先进入相应数据库, 在用\i命令
-  psql DB_name
-  \i /Users/chenpeng/Desktop/xxx.dmp
-  ```
+```bash
+# 在终端直接执行
+dropdb DB_name
+createdb -T template0 DB_name
+pg_restore -d DB_name /Users/chenpeng/Desktop/xxx.dmp ## 还原二进制文件
+
+# 在postgres环境里执行
+# 还原文本文件 先进入相应数据库, 在用\i命令
+psql DB_name
+\i /Users/chenpeng/Desktop/xxx.dmp
+```
 
 - 3. 修改用户
 
-  ```
-  alter database DB_name owner to user_name;
-  ```
+```
+alter database DB_name owner to user_name;
+```
 
 - 4. 执行sql脚本
 
-  ```
-  psql -d DB_name -f /mnt/source/bak/xxx.sql
-  ```
+```
+psql -d DB_name -f /mnt/source/bak/xxx.sql
+```
 
 - 5. 将执行结果输出到文件
 
-  ```
-  # 分三步
-  \o path
-  select * from users;
-  \o
-  ```
+```
+# 分三步
+\o path
+select * from users;
+\o
+```
 
 ### 5. pip 换源
 
@@ -527,10 +503,10 @@ sudo chown -R user:user /home/ubuntu/DIR
   > `https://pypi.tuna.tsinghua.edu.cn/simple/` 清华大学 <br/>
   > `http://pypi.mirrors.ustc.edu.cn/simple/` 中国科学技术大学 <br/>
 
-  ```bash
-  [global]
-  index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-  ```
+```bash
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 ### 6. ubuntu系统更换源
 

@@ -1,6 +1,6 @@
 # FirstProject
 
-# 笔记
+# 1. 笔记
 
 ## 0x00 琐碎
 
@@ -19,20 +19,21 @@
 
 ## 0x01 linux
 
-* [乱炖](notebook/linux/乱炖.md)
+* [乱炖 - 常用的脚本](notebook/linux/乱炖.md)
 * [Ubuntu安装微软字体](notebook/linux/Ubuntu安装微软字体.md)
-
-- [换源整合](notebook/linux/ubuntu换源)
+* [各个安装工具换源整合(MacOS适用)](notebook/linux/ubuntu换源)
+* [linux工具](notebook/linux/tools)
 
 ## 0x02 odoo
 
-* [Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
-* [odoo接口返回值格式修改](notebook/odoo/odoo接口返回值格式修改.md)
-* [Ubuntu源码安装Odoo10社区版](notebook/odoo/Ubuntu14.04源码安装Odoo10社区版.md)
-* [one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
-* [添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button/readme.md)
-* [xmlrpc Call Odoo Server](https://github.com/RRRoger/odoo_addons/tree/master/odoo_xmlrpc/README.md)
-* [Data Analysis Report](https://github.com/RRRoger/odoo_addons/tree/master/hs_query)
+* [系统 - Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
+* [框架 - odoo接口返回值格式修改](notebook/odoo/odoo接口返回值格式修改.md)
+* [安装 - Ubuntu源码安装Odoo10社区版](notebook/odoo/Ubuntu源码安装Odoo10社区版.md)
+* [安装 - Ubuntu源码安装Odoo12社区版](notebook/odoo/Ubuntu源码安装Odoo12社区版.md)
+* [框架 - one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
+* [框架 - 添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button/readme.md)
+* [远程 - xmlrpc Call Odoo Server](https://github.com/RRRoger/odoo_addons/tree/master/odoo_xmlrpc/README.md)
+* [模块 - Data Analysis Report](https://github.com/RRRoger/odoo_addons/tree/master/hs_query)
 
 ## 0x03 小程序
 
@@ -42,10 +43,11 @@
 
 ### 1.postgres
 
-* [sql优化](notebook/database/sql优化.md)
-* [数据库迁移](notebook/database/postgres/数据库迁移.md)
-* [数据库死锁查询](notebook/database/postgres/数据库死锁查询.md)
-* [unnest - 数组集合转table](notebook/database/postgres/数组集合转table.md)
+* [脚本 - sql优化](notebook/database/sql优化.md)
+* [迁移 - 数据库迁移](notebook/database/postgres/数据库迁移.md)
+* [问题 - 数据库死锁查询](notebook/database/postgres/数据库死锁查询.md)
+* [问题 - 报错“Reason: image not found”](notebook/database/postgres/image_not_found.md)
+* [脚本 - unnest - 数组集合转table](notebook/database/postgres/数组集合转table.md)
 * [远程 - 允许远程访问配置修改](notebook/database/postgres/允许远程访问配置修改.md)
 * [升级 - 数据库升级](notebook/database/postgres/数据库升级.md)
 * [迁移 - pg数据库迁移,步骤](notebook/database/postgres/pg数据库迁移,步骤.md)
@@ -53,8 +55,9 @@
 * [加密 - 数据库文件](notebook/database/postgres/数据库文件.md)
 * [递归 - 可能会用到](notebook/database/postgres/可能会用到.md)
 * [权限 - 修改数据库用户](notebook/database/postgres/修改数据库用户.md)
-* [数据库备份恢复](notebook/database/postgres/数据库备份恢复.md)
-* [字符串常用函数](notebook/database/postgres/字符串常用函数.md)
+* [备份 - 数据库备份恢复](notebook/database/postgres/数据库备份恢复.md)
+* [脚本 - 字符串常用函数](notebook/database/postgres/字符串常用函数.md)
+* [备份 - 定时自动备份](notebook/database/postgres/定时自动备份.md)
 
 ### 2.oracle
 
@@ -78,7 +81,7 @@
 
 ## 0X08 视频剪辑笔记
 
-- [Final_Cut_Pro_Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
-- [PS_Tips](notebook/视频剪辑笔记/PS_Tips.md)
+- [[FCPX] Final Cut Pro Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
+- [[PS] PS Tips](notebook/视频剪辑笔记/PS_Tips.md)
 
 

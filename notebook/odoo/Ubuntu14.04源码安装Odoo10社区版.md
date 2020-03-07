@@ -1,7 +1,7 @@
 # Ubuntu源码安装Odoo10社区版
 
 
-### 1、更新Ubuntu服务器软件源(*pass 这步可以不做*)
+### 1、* (*pass 这步可以不做*) 更新Ubuntu服务器软件源
 ```bash
 sudo apt-get update  #更新软件源  
 sudo apt-get dist-upgrade -y  #更新软件包，自动查找依赖关系  
@@ -63,7 +63,7 @@ sudo apt-get install -y postgresql
 sudo -u postgres createuser --createdb --no-createrole --no-superuser --pwprompt odoo
 ```
 
-### 5、安装Python运行库和wkhtmltopdf
+### 4、安装Python运行库
 > odoo源码目录下的 requirements.txt 文件里面列出了 odoo10 依赖的所有 Python lib。
 因为lxml ldap psycopg2 需要使用gcc进行编译，所以需要先安装开发相关的库 libxml2, libxslt, libpq-dev, libldap2-dev, libsasl2-dev。
 
@@ -92,6 +92,10 @@ sudo apt-get install -y python-pip
 sudo pip install -r /home/odoo/odoo10/requirements.txt
 sudo apt-get -f install
 ```
+
+### 6、安装wkhtmltopdf
+> odoo源码目录下的 requirements.txt 文件里面列出了 odoo10 依赖的所有 Python lib。
+因为lxml ldap psycopg2 需要使用gcc进行编译，所以需要先安装开发相关的库 libxml2, libxslt, libpq-dev, libldap2-dev, libsasl2-dev。
 
 > 下载安装wkhtmltopdf(Odoo使用wkhtmltopdf来输出pdf)：
 
@@ -125,14 +129,14 @@ sudo apt-get install -y ttf-wqy-zenhei ttf-wqy-microhei
 wkhtmltopdf www.baidu.com baidu.pdf
 ```
 
-### 6、安装nodejs、node-less
+### 7、安装nodejs、node-less
 
 ```bash
 sudo apt-get install -y nodejs node-less npm
 sudo npm install -g less-plugin-clean-css
 ```
 
-### 7、配置Odoo的启动文件
+### 8、配置Odoo的启动文件
 > 用Ubuntu自带的nano编辑器在/etc/odoo/目录下创建odoo.conf文件。
 
 ```bash
@@ -173,7 +177,7 @@ sudo su - odoo -s /bin/bash
 
 > 在浏览器输入http://ip:8069 检查
 
-### 8、配置启动脚本
+### 9、配置启动脚本
 > 用Ubuntu自带的nano编辑器在/etc/init.d/目录下创建odoo启动脚本文件，然后把它改成可执行文件，赋给root用户。
 
 ```bash
@@ -326,7 +330,7 @@ tail -f /var/log/odoo/odoo-server.log
 sudo service odoo stop
 ```
 
-### 9、将Odoo设为开机自启动 (可以不做)
+### 10、将Odoo设为开机自启动 (可以不做)
 > 让启动脚本随着Ubuntu服务器的开、关机而自动启动、关闭Odoo服务。
 
 ```bash
@@ -339,7 +343,7 @@ sudo update-rc.d odoo defaults
 ps -ef|grep odoo
 ```
 
-### 10、*用nginx代理odoo
+### 11、*用nginx代理odoo
 ```bash
 sudo apt-get  install nginx
 ```

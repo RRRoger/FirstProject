@@ -4,7 +4,7 @@
 
 ## 0x01 brew换源
 
-### 1. 替换默认源
+- 1. 替换默认源
 
 > https://mirrors.ustc.edu.cn/brew.git 中科大 <br/>
 > https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git 清华大学
@@ -14,7 +14,7 @@ cd "$(brew --repo)"
 git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
 ```
 
-### 2. 替换homebrew-core.git
+- 2. 替换homebrew-core.git
 
 > https://mirrors.ustc.edu.cn/homebrew-core.git 中科大 <br/>
 > https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git 清华大学
@@ -24,7 +24,7 @@ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 ```
 
-### 3. 替换homebrew-bottles:
+- 3. 替换homebrew-bottles:
 
 > https://mirrors.ustc.edu.cn/homebrew-bottles 中科大 <br/>
 > https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles 清华大学
@@ -34,7 +34,7 @@ echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebre
 source ~/.bash_profile
 ```
 
-### 4. 应用生效:
+- 4. 应用生效:
 
 ```bash
 brew update
@@ -42,7 +42,7 @@ brew update
 
 ## 0x02 pip换源
 
-### 1. 修改 ~/.pip/pip.conf (没有就创建一个)
+- 1. 修改 ~/.pip/pip.conf (没有就创建一个)
 
 > `http://mirrors.aliyun.com/pypi/simple/` 阿里云 <br/>
 > `https://pypi.mirrors.ustc.edu.cn/simple/` 中国科技大学 <br/>
@@ -56,7 +56,7 @@ brew update
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-#### 99999. windows下设置:
+-# 99999. windows下设置:
 
 > 直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini
 
@@ -72,11 +72,11 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 > `https://docker.mirrors.ustc.edu.cn` 中国科技大学 <br/>
 > `https://pee6w651.mirror.aliyuncs.com` 阿里云 <br/>
 
-### 1. mac 如图
+- 1. mac 如图
 
 ![](https://ae01.alicdn.com/kf/HTB1SbrYaN_rK1RkHFqDq6yJAFXa1.jpg)
 
-### 2. Ubuntu
+- 2. Ubuntu
 
 - 1. 在/etc/docker/目录下新建daemon.json文件，如果有就修改
 
@@ -98,25 +98,25 @@ sudo service docker restart
 
 ## 0x04 ubuntu系统更换源
 
-### 1. 进入/etc/apt/
+- 1. 进入/etc/apt/
 
 ```bash
 cd /etc/apt
 ```
 
-### 2. 备份sources.list文件
+- 2. 备份sources.list文件
 
 ```bash
 sudo cp sources.list sources.list.bak
 ```
 
-### 3. 修改sources.list文件
+- 3. 修改sources.list文件
 
 ```bash
 sudo vim sources.list
 ```
 
-### ***Ubuntu 14.04***
+- ***Ubuntu 14.04***
 
 ```
 sudo vim /etc/apt/sources.list #修改
@@ -132,7 +132,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted univer
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
 ```
 
-### ***Ubuntu 16.04.3***
+- ***Ubuntu 16.04.3***
 
 ```
 #aliyun
@@ -190,8 +190,49 @@ deb http://mirror.neu.edu.cn/ubuntu/ xenial-security universe
 deb http://mirror.neu.edu.cn/ubuntu/ xenial-security multiverse
 ```
 
-### 4. 更新列表
+- 4. 更新列表
 
 ```
 sudo apt-get update
 ```
+
+
+
+## 0x05 npm 换源
+
+- ***方法一***:
+
+- ```bash
+  # 淘宝镜像: `http://registry.npm.taobao.org/`
+  
+  npm config set registry https://registry.npm.taobao.org
+  # 配置后可通过下面方式来验证是否成功
+  
+  npm config get registry
+  # 或npm info express
+  ```
+
+- ***方法二***: 通过cnpm
+
+- ```bash
+  npm install -g cnpm --registry=https://registry.npm.taobao.org
+  cnpm install -g electron
+  # 等待安装完成，成功后使用electron -v查看electron版本
+  ```
+  
+- ***方法三***: 编辑 ~/.npmrc
+  
+- ```bash
+  vim ~/.npmrc
+  ```
+
+- 添加如下配置
+
+- ```
+  registry=https://registry.npm.taobao.org
+  sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+  phantomjs_cdnurl=http://npm.taobao.org/mirrors/phantomjs
+  electron_mirror=http://npm.taobao.org/mirrors/electron/
+  ```
+
+

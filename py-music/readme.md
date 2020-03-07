@@ -22,3 +22,4 @@ ffmpeg -i source_path dest_path
 
 ## 3.脚本
 > ### [cut_music.py](cut_music.py)
+
