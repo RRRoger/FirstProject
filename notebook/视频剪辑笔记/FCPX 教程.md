@@ -1,4 +1,4 @@
-# FCPX 视频剪辑教程 - 笔记
+# FCPX 视频剪辑教程 - via YouTube
 
 > [Youtube地址](https://www.youtube.com/watch?v=He2KrjrXwKU&list=PLPGawU13YdgW0AEKs8bs7rjzxTrAoH_vD) By 冬谷二十四
 
