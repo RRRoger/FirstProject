@@ -83,6 +83,6 @@
 
 - [[FCPX] Final Cut Pro Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
 - [[PS] PS Tips](notebook/视频剪辑笔记/PS_Tips.md)
-- [FCPX 教程(via youtube)](notebook/视频剪辑笔记/FCPX 教程)
+- [FCPX 教程(via youtube)](notebook/视频剪辑笔记/FCPX教程)
 
 
