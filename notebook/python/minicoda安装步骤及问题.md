@@ -92,10 +92,10 @@ conda create -n pj_odoo12 python=3.6 -y
 
 ```bash
 # 激活
-source activate djangocms
+conda activate djangocms
 
 # 退出
-source deactivate
+conda deactivate
 ```
 
 ## 9、卸载`miniconda`
@@ -116,7 +116,7 @@ rm -rf ~/.continuum
 
 ## 10、常用命令
 
-- 查看当前存在哪些虚拟环境
+### 查看当前存在哪些虚拟环境
 
 ```bash
 # 标记*的代表当前所处的虚拟环境
@@ -124,37 +124,37 @@ conda env list
 conda info -e
 ```
 
-- 创建python虚拟环境
+### 创建python虚拟环境
 
 ```bash
 conda create -n your_env_name python=X.X（2.7、3.6等)
 ```
 
-- 激活虚拟环境
+### 激活虚拟环境
 
 ```bash
-source activate your_env_name
+conda activate your_env_name
 ```
 
-- 虚拟环境中安装额外的包
+### 虚拟环境中安装额外的包
 
 ```bash
 conda install -n your_env_name [package]
 ```
 
-- 关闭虚拟环境
+### 关闭虚拟环境
 
 ```bash
-source deactivate
+conda deactivate
 ```
 
-- 删除虚拟环境
+### 删除虚拟环境
 
 ```bash
 conda remove -n your_env_name(虚拟环境名称) --all
 ```
 
-- 删除环境中的某个包
+### 删除环境中的某个包
 
 ```bash
 conda remove --name your_env_name  package_name
@@ -199,5 +199,17 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 ```bash
 pyenv global system
+```
+
+### 2、关闭虚拟环境问题
+
+> `source deactivate`已经弃用
+>
+> 请使用`conda deactivate`
+
+- 关闭遇到`No such file or directory`
+
+```bash
+DeprecationWarning: 'source deactivate' is deprecated. Use 'conda deactivate'.
 ```
 
