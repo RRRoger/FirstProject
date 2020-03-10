@@ -70,10 +70,20 @@
 * [安装](notebook/rabbitmq/安装mq.md)
 * [清除队列步骤](notebook/rabbitmq/清除队列步骤.md)
 
-## 0x06 python2.x
+## 0x06 python
+
+### 0、Python xx
+
+- [minicoda安装步骤及问题](notebook/python/minicoda安装步骤及问题.md)
+
+### 1、python2
 
 * [安装ipython 和 jupyter-notebook](notebook/python/安装ipython&jupyter-notebook-python2.md)
 * [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
+
+### 2、python3
+
+- xxxxxxx
 
 ## 0x07 Script
 
@@ -83,6 +93,6 @@
 
 - [[FCPX] Final Cut Pro Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
 - [[PS] PS Tips](notebook/视频剪辑笔记/PS_Tips.md)
-- [FCPX 教程(via youtube)](notebook/视频剪辑笔记/FCPX教程.md)
+- [FCPX 教程笔记(via youtube)](notebook/视频剪辑笔记/FCPX教程.md)
 
 

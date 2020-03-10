@@ -1,0 +1,203 @@
+# MiniCoda安装步骤及问题
+
+> 众所周知，python是世界上最好的两门语言。
+>
+> conda用于python项目做多版本环境创建与切换的
+>
+> 有效的进行版本之间的隔离
+
+## 1、下载安装文件
+
+```bash
+cd ~
+wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh
+```
+
+## 2、安装
+
+```bash
+cd ~
+bash Miniconda2-latest-MacOSX-x86_64.sh
+# 根据提示完成安装
+```
+
+## 3、手动生效环境变量
+
+```bash
+source ~/.bash_profile
+```
+
+## 4、验证安装成功
+
+```bash
+conda -h
+
+# 出现如下信息表示成功
+
+usage: conda [-h] [-V] command ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+Options:
+
+...
+```
+
+## 5、升级conda以及pip version
+
+```bash
+conda upgrade conda
+pip install --upgrade pip
+```
+
+## 6、查看env list
+
+```bash
+conda-env list
+
+# conda environments:
+#
+base                  *  /Users/chenpeng/miniconda2
+```
+
+## 7、创建虚拟环境
+
+> 创建一个名叫pj_odoo12的py3.6环境
+
+```bash
+conda create -n pj_odoo12 python=3.6 -y
+```
+
+- 创建完毕提示
+
+```bash
+# To activate this environment, use
+#
+#     $ conda activate pj_odoo12
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+```
+
+- 虚拟环境地址
+
+```bash
+# environment location: /Users/chenpeng/miniconda2/envs/pj_odoo12
+
+/Users/xxxx/miniconda2/envs/pj_odoo12
+```
+
+## 8、激活和退出虚拟环境
+
+```bash
+# 激活
+source activate djangocms
+
+# 退出
+source deactivate
+```
+
+## 9、卸载`miniconda`
+
+```bash
+# 去掉~/.bash_profile环境变量配置
+# added by Miniconda2 installer
+export PATH="/Users/chenpeng/miniconda2/bin:$PATH"
+
+# 删除miniconda
+rm -rf ~/miniconda2
+
+# 去掉相关隐藏文件
+rm -rf ~/.condarc
+rm -rf ~/.conda
+rm -rf ~/.continuum
+```
+
+## 10、常用命令
+
+- 查看当前存在哪些虚拟环境
+
+```bash
+# 标记*的代表当前所处的虚拟环境
+conda env list
+conda info -e
+```
+
+- 创建python虚拟环境
+
+```bash
+conda create -n your_env_name python=X.X（2.7、3.6等)
+```
+
+- 激活虚拟环境
+
+```bash
+source activate your_env_name
+```
+
+- 虚拟环境中安装额外的包
+
+```bash
+conda install -n your_env_name [package]
+```
+
+- 关闭虚拟环境
+
+```bash
+source deactivate
+```
+
+- 删除虚拟环境
+
+```bash
+conda remove -n your_env_name(虚拟环境名称) --all
+```
+
+- 删除环境中的某个包
+
+```bash
+conda remove --name your_env_name  package_name
+```
+
+
+
+## 11、换源
+
+### 1、Miniconda3及pip换源
+
+> **清华源地址：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/**
+
+- 添加命令
+
+```bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+```
+
+- 删除命令
+
+```bash
+conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+```
+
+- pip永久换源
+- 修改或者添加**~/.pip/pip.conf**
+
+```bash
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+## 12、注意事项
+
+### 1、pyenv 和 conda 冲突
+
+- 切换至系统的py环境
+
+```bash
+pyenv global system
+```
+
