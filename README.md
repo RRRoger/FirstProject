@@ -2,7 +2,7 @@
 
 # 1. 笔记
 
-## 0x00 :notebook_with_decorative_cover:琐碎
+## 0x00 琐碎
 
 * [Roger's Gist](https://gist.github.com/RRRoger)
 * [什么是递归?](notebook/trivial/recursion.md)
@@ -35,7 +35,7 @@
 * [远程 - xmlrpc Call Odoo Server](https://github.com/RRRoger/odoo_addons/tree/master/odoo_xmlrpc/README.md)
 * [模块 - Data Analysis Report](https://github.com/RRRoger/odoo_addons/tree/master/hs_query)
 
-## 0x03 :iphone:小程序
+## 0x03 ​​小程序
 
 *  [微信小程序支持多语言](notebook/weapp/微信小程序支持多语言.md)
 
@@ -65,12 +65,12 @@
 
 ### 3.sqlserver
 
-## 0x05 :rocket:rabbitmq
+## 0x05 rabbitmq
 
 * [安装](notebook/rabbitmq/安装mq.md)
 * [清除队列步骤](notebook/rabbitmq/清除队列步骤.md)
 
-## 0x06 :snake:python
+## 0x06 python
 
 ### 0、Python xx
 
@@ -83,13 +83,13 @@
 
 ### 2、python3
 
-- xxxxxxx :pencil2:
+- xxxxxxx 
 
-## 0x07 :pencil:Script
+## 0x07 Script
 
 - [进制转化](notebook/trivial/进制转换.md)
 
-## 0X08 :camera:视频剪辑笔记
+## 0X08 ​​视频剪辑笔记
 
 - [[FCPX] Final Cut Pro Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
 - [[PS] PS Tips](notebook/视频剪辑笔记/PS_Tips.md)
