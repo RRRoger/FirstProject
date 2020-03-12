@@ -82,7 +82,7 @@ insert into company (name) values ('Nike');
 - 所以最终的sql语句是（总计：14个单引号）
 
   - ```sql
-    insert into company (name) values (''''''''''''');
+    insert into company (name) values ('''''''''''''');
     ```
 
 
