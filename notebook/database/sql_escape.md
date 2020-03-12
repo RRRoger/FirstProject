@@ -112,6 +112,6 @@ insert into company (name) values ('Nike');
 
 ```sql
 -- 使用字符串拼接的方式 CHR(39) 即单引号
-insert into company (name) values ('O' || || CHR(39) || 'Reilly');
+insert into company (name) values ('O' || CHR(39) || 'Reilly');
 ```
 
