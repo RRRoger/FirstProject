@@ -11,6 +11,7 @@
 - option + w：添加间隙；option + cmd + w：添加占位符
 - option + 鼠标拖动：可以复制片段
 - shift + z：把时间线变成合适大小
+- option + F：提取单帧画面
 
 ## 1、初识软件
 

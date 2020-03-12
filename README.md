@@ -41,6 +41,10 @@
 
 ## 0x04 数据库
 
+### 0.通用
+
+- [基本 - SQL语句转义字符](notebook/database/sql_escape.md)
+
 ### 1.postgres
 
 * [脚本 - sql优化](notebook/database/sql优化.md)
