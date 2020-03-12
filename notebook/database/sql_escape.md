@@ -5,8 +5,10 @@
 > ##### 参考链接：
 >
 > - [How to Escape Single Quotes in SQL?](https://www.databasestar.com/sql-escape-single-quote/)
+>   - https://www.databasestar.com/sql-escape-single-quote/
 >
 > - [SQL 的转义字符是：'（单引号）](https://blog.csdn.net/xuaner8786/article/details/79215339)
+>   - https://blog.csdn.net/xuaner8786/article/details/79215339
 
 
 ## 1、先聊聊单引号双引号的作用
@@ -21,10 +23,10 @@ update company set name = 'Nike';
 
 ### 2）双引号
 
-> 一般表示一个变量：如：表命，字段名等
+> 一般表示一个变量：如：表名，字段名等
 
 ```sql
-update "company" set "companys" = 'Nike';
+update "company" set "name" = 'Nike';
 ```
 
 - 双引号特殊场景
@@ -73,11 +75,11 @@ insert into company (name) values ('Nike');
 
 - 这条记录的名称是6个单引号
 
-- 每个单引号需要一个单引号转义，得到：`''''''''''''`
+- 每个单引号需要一个单引号转义，得到（12个单引号）：`''''''''''''`
 
 - 最后还要用两个单引号表示字符串
 
-- 所以最终的sql语句是
+- 所以最终的sql语句是（总计：14个单引号）
 
   - ```sql
     insert into company (name) values (''''''''''''');
@@ -109,7 +111,7 @@ insert into company (name) values ('Nike');
 ## 其他写法
 
 ```sql
--- 使用字符串拼接的方式
+-- 使用字符串拼接的方式 CHR(39) 即单引号
 insert into company (name) values ('O' || || CHR(39) || 'Reilly');
 ```
 
