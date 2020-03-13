@@ -21,7 +21,7 @@ cat /etc/passwd
 sudo adduser --system --home=/home/odoo12 --group odoo12
 ```
 
-> 系统用户不能用于登录并且没有shell，但当需要以它的身份进行特定操作时，可以用su命令切换用户：
+> 系统用户不能用于登录并且没有shell，但当需要以它的身份进行特定操作时，可以用su命令切换用户
 
 <div style="color:red">
     <ui>
@@ -150,10 +150,8 @@ source odoo-venv/bin/activate
 
 ```bash
 # 创建编辑配置文件
-cd
-mkdir .pip
-cd .pip
-vim pip.conf
+mkdir ~/.pip
+vim ~/.pip/pip.conf
 ```
 
 - 输入以下文本保存退出
@@ -202,14 +200,11 @@ exit
 
 `sudo vim /etc/odoo12.conf`
 
-- 创建log文件
+- 创建log目录
 
 ```bash
-cd /var/log
-sudo mkdir odoo12
-cd odoo12
-sudo touch odoo12-server.log
-sudo chown -R odoo12:odoo12 odoo12-server.log
+sudo mkdir /var/log/odoo12
+sudo chown -R odoo12:odoo12 /var/log/odoo12
 ```
 
 - 创建odoo12的静态目录

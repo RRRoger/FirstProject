@@ -60,13 +60,13 @@ select "123456" from table1;
 >
 > 仅有一个字段`名称`（`name`）
 
-### 1) 添加一个叫“Nike”的公司。
+### 1）添加一个叫“Nike”的公司。
 
 ```sql
 insert into company (name) values ('Nike');
 ```
 
-### 2) 添加一个叫“`O'Reilly`”的公司
+### 2） 添加一个叫“`O'Reilly`”的公司
 
 - ***注意***： 此时名称中有单引号， 而在sql语句里单引号是`表示一个字符串`
 
@@ -97,11 +97,9 @@ insert into company (name) values ('Nike');
     insert into company (name) values ('''''''''''''');
     ```
 
-
-
 ---
 
-## ***需要转义的字符***
+## 需要转义的字符
 
 ```bash
 '
@@ -117,8 +115,6 @@ insert into company (name) values ('Nike');
 @
 .............
 ```
-
-
 
 ## 其他写法
 

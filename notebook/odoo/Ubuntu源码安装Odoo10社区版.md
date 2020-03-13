@@ -189,7 +189,7 @@ addons_path = /home/odoo/odoo10/odoo/addons,/home/odoo/odoo10/addons
 > 修改配置文件（/etc/odoo/odoo.conf）的权限
 
 ```bash
-sudo chown odoo: /etc/odoo/odoo.conf
+sudo chown odoo:odoo /etc/odoo/odoo.conf
 sudo chmod 640 /etc/odoo/odoo.conf
 ```
 
@@ -333,8 +333,6 @@ sudo chown odoo:root /var/log/odoo  #修改所有者为odoo用户
 		<li>sudo systemctl unmask odoo.service</li>
 	</ui>
 </div>
-
-
 ```bash
 sudo service odoo start
 ```
@@ -372,15 +370,15 @@ sudo apt-get  install nginx
 
 ```
 server{
-　　listen 80;
-　　server_name odoo10;
-　　location / {
-　　　　proxy_set_header Host $host;
-　　　　proxy_set_header X-Real-IP $remote_addr;
-　　　　proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-　　　　proxy_pass http://0.0.0.0:8069;
-　　}
-}
+    listen 80;
+    server_name odoo12;
+    location / {
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_pass http://0.0.0.0:8069;
+    }
+} 
 ```
 
 > 把 /etc/nginx/sites-enabled/default 里面80注释或者改成其他端口
