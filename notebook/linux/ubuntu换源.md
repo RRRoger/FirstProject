@@ -121,7 +121,6 @@ sudo vim sources.list
 ***Ubuntu 14.04***
 
 ```
-sudo vim /etc/apt/sources.list #修改
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse

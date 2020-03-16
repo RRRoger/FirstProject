@@ -59,7 +59,7 @@ sudo su odoo12
 git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 /opt/odoo12/odoo
 mv odoo odoo12
 exit
-sudo chown -R odoo12:odoo12 odoo12
+sudo chown -R odoo12:odoo12 /home/odoo12/odoo12
 sudo chmod -R 774 /home/odoo12/odoo12
 ```
 
@@ -200,20 +200,6 @@ exit
 
 `sudo vim /etc/odoo12.conf`
 
-- 创建log目录
-
-```bash
-sudo mkdir /var/log/odoo12
-sudo chown -R odoo12:odoo12 /var/log/odoo12
-```
-
-- 创建odoo12的静态目录
-
-```bash
-sudo mkdir /var/lib/odoo12
-sudo chown -R odoo12:odoo12 /var/lib/odoo12
-```
-
 - 粘贴以下内容
 
 ```bash
@@ -232,6 +218,21 @@ logrotate = True
 ;xmlrpc_port = 8069
 ;db_filter = ^vivi$
 ```
+
+- 创建log目录
+
+```bash
+sudo mkdir /var/log/odoo12
+sudo chown -R odoo12:odoo12 /var/log/odoo12
+```
+
+- 创建odoo12的静态目录
+
+```bash
+sudo mkdir /var/lib/odoo12
+sudo chown -R odoo12:odoo12 /var/lib/odoo12
+```
+
 
 - 保存退出, 修改权限
 
@@ -302,4 +303,54 @@ sudo systemctl restart odoo12
 sudo systemctl stop odoo12
 ```
 
+### 9、添加自动备份数据库
 
+#### 1. 添加脚本
+
+```
+mkdir ~/db-backups
+chmod 777 ~/db-backups
+sudo su postgres
+cd
+vim pgbackup.sh
+```
+
+ - 粘贴以下文本
+
+```bash
+#!/bin/bash
+db_name="hesai_portal"
+file_name="/home/hesai/db-backups/"
+
+pg_dump --format=c $db_name -U postgres > "$file_name$db_name-`date '+%y%m%d%H%M'`.dump"
+```
+
+  - 修改文件权限
+
+```
+chmod 744 pgbackup.sh
+exit
+```
+
+#### 2. 创建定时任务
+
+```
+sudo vim /etc/crontab
+```
+
+- 在最后一行添加(每周执行一次)
+
+```bash
+0 0 * * 0 postgres /var/lib/postgresql/pgbackup.sh
+```
+
+- [crontab执行时间计算- 在线工具](https://tool.lu/crontab/)
+
+| name       | code        |
+| ---------- | ----------- |
+| 每5min执行 | */5 * * * * |
+| 每小时执行 | 0 * * * *   |
+| 每天执行   | 0 0 * * *   |
+| 每周执行   | 0 0 * * 0   |
+| 每月执行   | 0 0 1 * *   |
+| 每年执行   | 0 0 1 1 *   |
