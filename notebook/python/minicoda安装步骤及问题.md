@@ -171,8 +171,20 @@ conda remove --name your_env_name  package_name
 - 添加命令
 
 ```bash
+# 清华大学
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+
+# 中科大
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+
+# 上海交大
+conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/cloud/conda-forge/
 conda config --set show_channel_urls yes
 ```
 
@@ -181,6 +193,15 @@ conda config --set show_channel_urls yes
 ```bash
 conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+
+
+conda config --remove channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/main/
+conda config --remove channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/free/
+conda config --remove channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/cloud/conda-forge/
+
+conda config --remove channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+conda config --remove channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/free/
+
 ```
 
 - pip永久换源
