@@ -1,4 +1,4 @@
-# ubuntu 换源整合
+# ubuntu/MacOS 换源信息整合
 
 ## 0x01 brew换源
 

@@ -23,6 +23,7 @@
 * [Ubuntu安装微软字体](notebook/linux/Ubuntu安装微软字体.md)
 * [各个安装工具换源整合(MacOS适用)](notebook/linux/ubuntu换源)
 * [linux工具](notebook/linux/tools)
+* [Nginx 服务器证书安装](notebook/linux/nginx_ssl_set_up)
 
 ## 0x02 odoo
 
@@ -34,6 +35,7 @@
 * [框架 - 添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button/readme.md)
 * [远程 - xmlrpc Call Odoo Server](https://github.com/RRRoger/odoo_addons/tree/master/odoo_xmlrpc/README.md)
 * [模块 - Data Analysis Report](https://github.com/RRRoger/odoo_addons/tree/master/hs_query)
+* [Https-Nginx-Odoo配置](notebook/odoo/https_nginx_setting.md)
 
 ## 0x03 ​​小程序
 
