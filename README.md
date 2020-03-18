@@ -79,11 +79,11 @@
 ### 0、Python xx
 
 - [minicoda安装步骤及问题](notebook/python/minicoda安装步骤及问题.md)
+- [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
 
 ### 1、python2
 
 * [安装ipython 和 jupyter-notebook](notebook/python/安装ipython&jupyter-notebook-python2.md)
-* [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
 
 ### 2、python3
 
