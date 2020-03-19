@@ -14,8 +14,8 @@
 * [该不该提前还贷？](https://www.v2ex.com/t/531921)
 * [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)
 * [Ubuntu下socks代理dante-server安装与配置](notebook/trivial/Ubuntu下socks代理dante-server安装与配置.md)
-* [Ubuntu下socks代理dante-server安装与配置[Use Docker]](https://github.com/wernight/docker-dante)
 * [Proxifier：Mac OS给某个单独应用配置代理上网服务](notebook/trivial/Proxifier使用.md)
+* [搜索引擎指令](notebook/trivial/search_egine_cmd.md)
 
 ## 0x01 ​​linux
 
@@ -80,8 +80,8 @@
 
 ### 0、Python xx
 
-- [minicoda安装步骤及问题](notebook/python/minicoda安装步骤及问题.md)
-- [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
+* [minicoda安装步骤及问题](notebook/python/minicoda安装步骤及问题.md)
+* [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
 
 ### 1、python2
 
@@ -89,16 +89,16 @@
 
 ### 2、python3
 
-- xxxxxxx 
+* xxxxxxx 
 
 ## 0x07 Script
 
-- [进制转化](notebook/trivial/进制转换.md)
+* [进制转化](notebook/trivial/进制转换.md)
 
 ## 0X08 ​​视频剪辑笔记
 
-- [[FCPX] Final Cut Pro Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
-- [[PS] PS Tips](notebook/视频剪辑笔记/PS_Tips.md)
-- [FCPX 教程笔记(via youtube)](notebook/视频剪辑笔记/FCPX教程.md)
+* [[FCPX] Final Cut Pro Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
+* [[PS] PS Tips](notebook/视频剪辑笔记/PS_Tips.md)
+* [FCPX 教程笔记(via youtube)](notebook/视频剪辑笔记/FCPX教程.md)
 
 
