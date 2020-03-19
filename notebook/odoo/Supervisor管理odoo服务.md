@@ -9,8 +9,7 @@ sudo easy_install supervisor
 > ##### 如果报权限问题, 直接 `echo_supervisord_conf` 把输出的文本复制到新建的`supervisord.conf`文件下
 
 ```
-sudo mkdir /etc/supervisor
-sudo mkdir /etc/supervisor/config.d
+sudo mkdir -p /etc/supervisor/config.d
 sudo echo_supervisord_conf > /etc/supervisor/supervisord.conf
 ```
 
@@ -74,6 +73,7 @@ tail -f /tmp/supervisord.log # supervisor日志
 ```
 
 - 配置supervisor后台管理, 然后reload
+- 注意前面的`;`也要去掉
 
 ```
 [inet_http_server]         ; inet (TCP) server disabled by default
@@ -81,13 +81,3 @@ port=0.0.0.0:9001          ; ip_address:port specifier, *:port for all iface
 ;username=user             ; default is no username (open server)
 ;password=123              ; default is no password (open server)
 ```
-
-
-
-- 右击检查发现restart对应是一个url 那么我们可以用get请求去restart odoo的服务, 不用登录服务器, 直接在本地用命令就可以重启服务啦
-
-```
-wget "http://ip:9001/index.html?processname=odoo&action=restart"
-```
-
-- 此处可以参考下面链接, 双击执行脚本, 就可以很快捷的重启了

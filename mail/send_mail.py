@@ -2,6 +2,8 @@
 import smtplib  # 加载smtplib模块
 from email.mime.text import MIMEText
 from email.utils import formataddr
+from email.mime.multipart import MIMEMultipart
+from email.mime.application import MIMEApplication
 
 """
     发邮件的方法, 支持发多个人, 支持html和纯文本格式
@@ -47,7 +49,7 @@ def mail(sender_info, receivers, mail_info):
     mail_text = mail_info['mail_text']
     mail_type = mail_info['mail_type']  # plain 纯文本; html, html,
 
-    msg = MIMEText(mail_text, mail_type, 'utf-8')
+    msg = MIMEMultipart(mail_text, mail_type, 'utf-8')
 
     sender_nickname = sender_info['sender_nickname']
     sender = sender_info['sender']
@@ -64,9 +66,24 @@ def mail(sender_info, receivers, mail_info):
     msg['To'] = ','.join(receiver_mails)
     msg['Subject'] = subject  # 邮件的主题，也可以说是标题
 
+    #pdf类型附件
+    part = MIMEApplication(open('/Users/chenpeng/Desktop/WechatIMG95928.jpeg','rb').read())
+    part.add_header('Content-Disposition', 'attachment', filename="WechatIMG95928.jpeg")
+    msg.attach(part)
+
     res = True
     try:
         server = smtplib.SMTP(smtp_ip, smtp_port)  # 发件人邮箱中的SMTP服务器，端口是25
+
+        """如果遇到以下错误
+            smtplib.SMTPException: SMTP AUTH extension not supported by server
+            
+            在login之前，加入如下两行代码
+
+            server.ehlo()  # 向Gamil发送SMTP 'ehlo' 命令
+            server.starttls()
+        """
+
         server.login(sender, password)  # 括号中对应的是发件人邮箱账号、邮箱密码
         # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
         server.sendmail(sender, receiver_mails, msg.as_string())
@@ -83,6 +100,8 @@ def send_mail():
         print 'OK'
     else:
         print 'FAIL'
+
+
 
 
 send_mail()

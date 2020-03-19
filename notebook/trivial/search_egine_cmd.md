@@ -1,22 +1,26 @@
-# 搜索引擎常用指令
+### 如何用好搜索引擎？
 
-> 搜索引擎常用指令
+> 搜索引擎高级搜索匹配规则以及适配的搜索引擎范围
 >
-> 以及适配的搜索引擎
+> `G`: Google
+>
+> `B`: Baidu
+>
+> `M`: Bing(MicroSoft)
 
-| Command                     | Description                           | Scope |
-| --------------------------- | ------------------------------------- | ---------------- |
-| "abc"                       | 完全匹配搜索"abc"                     | `Google` `Baidu` `Bing` |
-| -abc                        | 不包含"abc"                           | `Google` `Bing`  |
-| a*c                         | "abc"也符合                           | `Google` `Baidu` `Bing` |
-| inurl:abc                   | in url： "abc"在url里                 | `Google` `Baidu` |
-| allinurl:abc cdf            | 相当于`inurl`含多组关键词             | `Google`         |
-| inanchor:点击这里           | in anchor：点击这里在链接锚文字中出现 | `Google`         |
-| intitle:abc                 | in title："abc"在标题中出现           | `Google` `Baidu` |
-| allintitle:abc cdf          | 相当于`intitle`含多组关键词           | `Google`         |
-| filetype:pdf python学习笔记 | 搜索特定文件格式`pdf`                 | `Google` `Baidu` `Bing` |
-| site:v2ex.com python        | 指定网站`v2ex.com`下搜索`python`      | `Google` `Baidu` `Bing` |
-| related:taobao.com          | 搜索与`taobao.com`相关的网站 | `Google` |
+| Command             | Description                | Scope |
+| ------------------- | -------------------------- | ----- |
+| "abc"               | 完全匹配搜索"abc"          | `GBM` |
+| -abc                | 不包含"abc"                | `GM`  |
+| a*c                 | "abc"也符合                | `GBM` |
+| inurl:abc           | "abc"在url里               | `GB`  |
+| allinurl:abc cdf    | 相当于inurl含多组关键词    | `G`   |
+| inanchor:点击这里   | 点击这里在链接文字中出现   | `G`   |
+| intitle:abc         | "abc"在标题中出现          | `GB`  |
+| allintitle:abc cdf  | 相当于intitle含多组关键词  | `G`   |
+| filetype:pdf python | 搜索特定文件格式`pdf`      | `GBM` |
+| site:v2ex.com abc   | 指定网站v2ex.com下搜索     | `GBM` |
+| related:taobao.com  | 搜索与taobao.com相关的网站 | `G`   |
 
 
 

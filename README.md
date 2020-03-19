@@ -15,7 +15,7 @@
 * [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)
 * [Ubuntu下socks代理dante-server安装与配置](notebook/trivial/Ubuntu下socks代理dante-server安装与配置.md)
 * [Proxifier：Mac OS给某个单独应用配置代理上网服务](notebook/trivial/Proxifier使用.md)
-* [搜索引擎指令](notebook/trivial/search_egine_cmd.md)
+* [如何用好搜索引擎？](notebook/trivial/search_egine_cmd.md)
 
 ## 0x01 ​​linux
 
@@ -78,18 +78,15 @@
 
 ## 0x06 python
 
-### 0、Python xx
+### 0、Python
 
 * [minicoda安装步骤及问题](notebook/python/minicoda安装步骤及问题.md)
 * [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
+* [安装ipython 和 jupyter-notebook](notebook/python/安装ipython&jupyter-notebook-python2.md)
 
 ### 1、python2
 
-* [安装ipython 和 jupyter-notebook](notebook/python/安装ipython&jupyter-notebook-python2.md)
-
 ### 2、python3
-
-* xxxxxxx 
 
 ## 0x07 Script
 
