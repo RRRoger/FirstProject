@@ -64,6 +64,7 @@
 * [备份 - 数据库备份恢复](notebook/database/postgres/数据库备份恢复.md)
 * [脚本 - 字符串常用函数](notebook/database/postgres/字符串常用函数.md)
 * [备份 - 定时自动备份](notebook/database/postgres/定时自动备份.md)
+* [Duplicate - 数据库复制](notebook/database/postgres/数据库复制.md)
 
 ### 2.oracle
 

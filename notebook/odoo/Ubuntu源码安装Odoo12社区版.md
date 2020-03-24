@@ -7,9 +7,6 @@ sudo apt-get update
 
 # 更新软件包，自动查找依赖关系
 sudo apt-get dist-upgrade -y
-
-# 重启服务器，以更新改变的内容
-sudo shutdown -r now
 ```
 
 ### 2、新建系统用户用于运行Odoo12程序
@@ -23,21 +20,14 @@ sudo adduser --system --home=/home/odoo12 --group odoo12
 
 > 系统用户不能用于登录并且没有shell，但当需要以它的身份进行特定操作时，可以用su命令切换用户
 
-<div style="color:red">
-    <ui>
-        <li>sudo vim /etc/passwd</li>
-        <li>odoo那一行改成如下;可以用 sudo su odoo12 进入odoo12用户</li>
-        <li>/home/odoo12:/bin/bash</li>
-    </ui>
-</div>
 ```bash
+# odoo那一行改成如下;可以用 sudo su odoo12 进入odoo12用户
+# 修改odoo那一行 /home/odoo12:/bin/bash
+sudo vim /etc/passwd
+
 sudo su odoo12 # 测试一下是否成功
 exit # 退出
 ```
-
-> 命令运行后会自动从当前目录切换到odoo12用户的home目录/home/odoo12。
->
-> 操作完毕后输入exit命令，离开odoo12用户的shell，回到登录所用的用户。
 
 ### 3、安装 Git ， Pip ， Node.js 和构建Odoo依赖项所需的工具
 
@@ -56,7 +46,7 @@ sudo apt install git python3-pip build-essential wget python3-dev python3-venv p
 ```bash
 sudo apt-get install -y git
 sudo su odoo12
-git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 /opt/odoo12/odoo
+git clone https://www.github.com/odoo/odoo --depth 1 --branch 12.0 /home/odoo12/odoo
 mv odoo odoo12
 exit
 sudo chown -R odoo12:odoo12 /home/odoo12/odoo12
@@ -142,11 +132,11 @@ source odoo-venv/bin/activate
 </div>
 
 
-> `http://mirrors.aliyun.com/pypi/simple/` 阿里云 <br/>
-> `https://pypi.mirrors.ustc.edu.cn/simple/` 中国科技大学 <br/>
-> `http://pypi.douban.com/simple/` 豆瓣(douban) <br/>
-> `https://pypi.tuna.tsinghua.edu.cn/simple/` 清华大学 <br/>
-> `http://pypi.mirrors.ustc.edu.cn/simple/` 中国科学技术大学 <br/>
+> `http://mirrors.aliyun.com/pypi/simple` 阿里云 <br/>
+> `https://pypi.mirrors.ustc.edu.cn/simple` 中国科技大学 <br/>
+> `http://pypi.douban.com/simple` 豆瓣(douban) <br/>
+> `https://pypi.tuna.tsinghua.edu.cn/simple` 清华大学 <br/>
+> `http://pypi.mirrors.ustc.edu.cn/simple` 中国科学技术大学 <br/>
 
 ```bash
 # 创建编辑配置文件
@@ -158,7 +148,7 @@ vim ~/.pip/pip.conf
 
 ```bash
 [global]
-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+index-url = http://mirrors.aliyun.com/pypi/simple
 ```
 
 <div style="color:red">
@@ -205,7 +195,7 @@ exit
 ```bash
 [options]
 ; This is the password that allows database operations:
-; admin_passwd = my_admin_passwd
+admin_passwd = my_admin_passwd
 db_host = False
 db_port = False
 db_user = odoo12
