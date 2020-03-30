@@ -237,6 +237,7 @@ sudo chmod 774 /etc/odoo12.conf
 - 创建文件
 
 ```bash
+sudo cp /etc/systemd/system/odoo12.service /etc/systemd/system/odoo12.service.bak
 sudo vim /etc/systemd/system/odoo12.service
 ```
 - 创建文件

@@ -3,6 +3,10 @@
 ### 1.安装supervisor(python2.4+)
 ```sh
 sudo easy_install supervisor
+
+# 如果报错 sudo: easy_install: command not found，
+# 请先使用下面命令安装python-setuptools
+# sudo apt-get install python-setuptools
 ```
 ### 2.创建配置文件
 
@@ -10,6 +14,7 @@ sudo easy_install supervisor
 
 ```
 sudo mkdir -p /etc/supervisor/config.d
+sudo touch /etc/supervisor/supervisord.conf
 sudo echo_supervisord_conf > /etc/supervisor/supervisord.conf
 ```
 
@@ -33,12 +38,14 @@ sudo touch /var/log/supervisor/odoo.error.log
 ### 5.创建进程管理文件(.ini)
 
 ```
-sudo vim /etc/supervisor/config.d/odoo.ini
+sudo vim /etc/supervisor/config.d/odoo12.ini
 ```
 
 > ##### 将下面的文本贴进去, command根据需要调整
 
-```
+- odoo
+
+```bash
 [program:odoo]
 command=/usr/bin/odoo --config /etc/odoo/odoo.conf --logfile /var/log/odoo/odoo-server.log
 stdout_logfile=/var/log/supervisor/odoo.log
@@ -51,6 +58,24 @@ priority=1
 stopasgroup=true
 killasgroup=true
 ```
+
+- odoo12
+
+```bash
+[program:odoo12]
+command=/home/hesai/miniconda3/envs/py37/bin/python /home/odoo12/odoo12/odoo-bin -c /etc/odoo12.conf
+stdout_logfile=/var/log/supervisor/odoo12.log
+stderr_logfile=/var/log/supervisor/odoo12.error.log
+user=odoo12
+autostart=true
+autorestart=true
+startsecs=5
+priority=1
+stopasgroup=true
+killasgroup=true
+```
+
+
 
 ### 6.启动supervisor服务
 
