@@ -3,7 +3,7 @@
 ## 1. 安装
 
 ```
-apt-get install dante-server
+sudo apt-get install dante-server
 ```
 
 ## 2. 配置
@@ -11,7 +11,7 @@ apt-get install dante-server
 - 首先备份/etc/danted.conf
 
 ```bash
-mv /etc/danted.conf /etc/danted.conf.bak
+sudo mv /etc/danted.conf /etc/danted.conf.bak
 ```
 
 - 然后将其内容替换为:
@@ -48,13 +48,13 @@ block {
 ## 3. 创建log目录
 
 ```bash
-mkdir /var/log/sockd
+sudo mkdir /var/log/sockd
 ```
 
 ## 4. 启动
 
 ```bash
-/etc/init.d/danted start
+sudo /etc/init.d/danted start
 ```
 
 ## 5. 检测是否启动成功

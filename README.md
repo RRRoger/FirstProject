@@ -37,6 +37,7 @@
 * [远程 - xmlrpc Call Odoo Server](https://github.com/RRRoger/odoo_addons/tree/master/odoo_xmlrpc/README.md)
 * [模块 - Data Analysis Report](https://github.com/RRRoger/odoo_addons/tree/master/hs_query)
 * [Https-Nginx-Odoo配置](notebook/odoo/https_nginx_setting.md)
+* [Database auto-backup](https://www.odoo.com/apps/modules/12.0/auto_backup/)
 
 ## 0x03 ​​小程序
 
@@ -83,6 +84,7 @@
 ### 0、Python
 
 * [minicoda安装步骤及问题](notebook/python/minicoda安装步骤及问题.md)
+* [装饰器](notebook/python/python装饰器.md)
 * [解析配置文件](other_tools/parse_conf_file/解析配置文件.md)
 * [安装ipython 和 jupyter-notebook](notebook/python/安装ipython&jupyter-notebook-python2.md)
 
