@@ -1,4 +1,4 @@
-# 安装 ipython & jupyter-notebook (python2.x)
+# 安装 ipython & jupyter-notebook (python)
 
 
 ## 1.安装ipython
