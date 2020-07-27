@@ -68,11 +68,17 @@
 * [备份 - 定时自动备份](notebook/database/postgres/定时自动备份.md)
 * [Duplicate - 数据库复制](notebook/database/postgres/数据库复制.md)
 
+
+
 ### 2.oracle
 
 * [cx_Oracle安装](notebook/database/oracle/cx_Oracle安装.md)
 
 ### 3.sqlserver
+
+### 4.mysql
+
+* [常用脚本](notebook/database/mysql/mysql_script.md)
 
 ## 0x05 rabbitmq
 
@@ -91,6 +97,21 @@
 ### 1、python2
 
 ### 2、python3
+
+### 3、flask
+
+* [静态文件加载方式](notebook/python/flask/静态文件加载)
+* [初始化问题解决](notebook/python/flask/初始化问题解决)
+* [接口访问地址问题](notebook/python/flask/接口访问地址问题)
+* [解决needed in a foreign key constraint问题](notebook/python/flask/解决needed in a foreign key constraint问题)
+* [Target database is not up的解决方案](notebook/python/flask/Target database is not up的解决方案)
+* [解决Can‘t locate revision identified by](notebook/python/flask/解决Can‘t locate revision identified by)
+* [flask query filter常用操作符 1](https://www.cnblogs.com/why957/p/9151011.html)
+* [flask query filter常用操作符 2](https://blog.csdn.net/m0_38061194/article/details/79295773)
+* [flask修改数据库字段的类型和长度](notebook/python/flask/flask修改数据库字段的类型和长度)
+* [前端之 关于火狐不支持reload的问题](notebook/python/flask/前端之 关于火狐不支持reload的问题)
+* [安全注意事项](https://dormousehole.readthedocs.io/en/latest/security.html#id1)
+  * [Set-Cookie](https://dormousehole.readthedocs.io/en/latest/security.html#set-cookie)
 
 ## 0x07 Script
 

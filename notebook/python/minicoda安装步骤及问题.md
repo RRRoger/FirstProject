@@ -66,6 +66,8 @@ base                  *  /Users/chenpeng/miniconda2
 
 ```bash
 conda create -n pj_odoo12 python=3.6 -y
+conda create -n py38 python=3.8 -y
+
 ```
 
 - 创建完毕提示
@@ -92,7 +94,7 @@ conda create -n pj_odoo12 python=3.6 -y
 
 ```bash
 # 激活
-conda activate djangocms
+conda activate py38
 
 # 退出
 conda deactivate
