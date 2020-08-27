@@ -5,16 +5,27 @@
 ## 0x00 琐碎
 
 * [Roger's Gist](https://gist.github.com/RRRoger)
+
 * [什么是递归?](notebook/trivial/recursion.md)
+
 * [关闭pad和iPhone来电同步](notebook/trivial/关闭pad和iPhone来电同步.md)
+
 * [mac os 之间屏幕共享](notebook/trivial/macos之间屏幕共享.md)
+
 * [Cut Music](py-music/readme.md)
+
 * [搜狗输入法自定义短语](other_script/sougou_input/phrases.ini)
+
 * [linux和win定时任务实现](notebook/trivial/linux和win定时任务实现.md)
+
 * [该不该提前还贷？](https://www.v2ex.com/t/531921)
+
 * [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)
+
 * [Ubuntu下socks代理dante-server安装与配置](notebook/trivial/Ubuntu下socks代理dante-server安装与配置.md)
+
 * [Proxifier：Mac OS给某个单独应用配置代理上网服务](notebook/trivial/Proxifier使用.md)
+
 * [如何用好搜索引擎？](notebook/trivial/search_egine_cmd.md)
 
 ## 0x01 ​​linux
@@ -29,15 +40,16 @@
 ## 0x02 odoo
 
 * [系统 - Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
-* [框架 - odoo接口返回值格式修改](notebook/odoo/odoo接口返回值格式修改.md)
 * [安装 - Ubuntu源码安装Odoo10社区版](notebook/odoo/Ubuntu源码安装Odoo10社区版.md)
 * [安装 - Ubuntu源码安装Odoo12社区版](notebook/odoo/Ubuntu源码安装Odoo12社区版.md)
 * [框架 - one2many搜索去重实现](notebook/odoo/[odoo]one2many搜索去重实现.md)
 * [框架 - 添加自定义按钮](https://github.com/RRRoger/odoo_addons/tree/master/tree_view_button/readme.md)
+* [框架 - odoo接口返回值格式修改](notebook/odoo/odoo接口返回值格式修改.md)
 * [远程 - xmlrpc Call Odoo Server](https://github.com/RRRoger/odoo_addons/tree/master/odoo_xmlrpc/README.md)
 * [模块 - Data Analysis Report](https://github.com/RRRoger/odoo_addons/tree/master/hs_query)
+* [模块 - many2many_tags 支持多选](https://www.odoo.com/fr_FR/forum/aide-1/question/widget-many2many-tags-with-multi-select-90671)
+* [模块 - Database auto-backup](https://www.odoo.com/apps/modules/12.0/auto_backup/)
 * [Https-Nginx-Odoo配置](notebook/odoo/https_nginx_setting.md)
-* [Database auto-backup](https://www.odoo.com/apps/modules/12.0/auto_backup/)
 
 ## 0x03 ​​小程序
 

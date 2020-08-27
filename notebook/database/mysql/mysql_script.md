@@ -6,6 +6,8 @@
 
 ```bash
 mysql -uroot -ppassword
+
+mysql -h host db_name -uuser_name -ppassword
 ```
 
 - 显示数据库
