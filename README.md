@@ -5,28 +5,18 @@
 ## 0x00 琐碎
 
 * [Roger's Gist](https://gist.github.com/RRRoger)
-
 * [什么是递归?](notebook/trivial/recursion.md)
-
 * [关闭pad和iPhone来电同步](notebook/trivial/关闭pad和iPhone来电同步.md)
-
 * [mac os 之间屏幕共享](notebook/trivial/macos之间屏幕共享.md)
-
 * [Cut Music](py-music/readme.md)
-
 * [搜狗输入法自定义短语](other_script/sougou_input/phrases.ini)
-
 * [linux和win定时任务实现](notebook/trivial/linux和win定时任务实现.md)
-
 * [该不该提前还贷？](https://www.v2ex.com/t/531921)
-
-* [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)
-
+* [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)​​
 * [Ubuntu下socks代理dante-server安装与配置](notebook/trivial/Ubuntu下socks代理dante-server安装与配置.md)
-
 * [Proxifier：Mac OS给某个单独应用配置代理上网服务](notebook/trivial/Proxifier使用.md)
-
 * [如何用好搜索引擎？](notebook/trivial/search_egine_cmd.md)
+* [常用英文词汇](notebook/trivial/vocabulary.md)
 
 ## 0x01 ​​linux
 
