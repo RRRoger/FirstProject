@@ -11,7 +11,6 @@
 * [Cut Music](py-music/readme.md)
 * [搜狗输入法自定义短语](other_script/sougou_input/phrases.ini)
 * [linux和win定时任务实现](notebook/trivial/linux和win定时任务实现.md)
-* [该不该提前还贷？](https://www.v2ex.com/t/531921)
 * [解决Redmine看不到"新建问题"按钮的问题](http://www.redmine.org/boards/2/topics/46330)​​
 * [Ubuntu下socks代理dante-server安装与配置](notebook/trivial/Ubuntu下socks代理dante-server安装与配置.md)
 * [Proxifier：Mac OS给某个单独应用配置代理上网服务](notebook/trivial/Proxifier使用.md)
@@ -125,4 +124,15 @@
 * [[PS] PS Tips](notebook/视频剪辑笔记/PS_Tips.md)
 * [FCPX 教程笔记(via youtube)](notebook/视频剪辑笔记/FCPX教程.md)
 
+## 0X09 收藏的帖子与文章
+
+### 1. v2ex (https://www.v2ex.com)
+
+- [公司内部做一次好的技术分享需要注意哪些事情?](https://www.v2ex.com/t/755724)
+- [答:如何写好一篇技术简历?](https://www.v2ex.com/t/623704#reply86)
+- [大家喜欢使用 anaconda 吗？](https://www.v2ex.com/t/521254#reply73)
+- [想出国玩一趟，求指导](https://www.v2ex.com/t/537172#reply129)
+- [该不该提前还贷？](https://www.v2ex.com/t/531921)
+- [我想给团队搭建一个 wiki，大家有什么方便使用的开源 wiki 推荐吗 ？](https://www.v2ex.com/t/735110#reply99)
+- [求推荐开源 markdown 编辑器](https://www.v2ex.com/t/658439#reply40)
 
