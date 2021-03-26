@@ -81,6 +81,10 @@
 
 * [常用脚本](notebook/database/mysql/mysql_script.md)
 
+### 5.monogoDB
+
+* [基础知识](notebook/database/mongodb/基础知识.md)
+
 ## 0x05 rabbitmq
 
 * [安装](notebook/rabbitmq/安装mq.md)
@@ -123,6 +127,7 @@
 * [[FCPX] Final Cut Pro Tips](notebook/视频剪辑笔记/Final_Cut_Pro_Tips.md)
 * [[PS] PS Tips](notebook/视频剪辑笔记/PS_Tips.md)
 * [FCPX 教程笔记(via youtube)](notebook/视频剪辑笔记/FCPX教程.md)
+* [FCPX 学习2](notebook/视频剪辑笔记/FCPX学习.md)
 
 ## 0X09 收藏的帖子与文章
 
@@ -136,3 +141,8 @@
 - [我想给团队搭建一个 wiki，大家有什么方便使用的开源 wiki 推荐吗 ？](https://www.v2ex.com/t/735110#reply99)
 - [求推荐开源 markdown 编辑器](https://www.v2ex.com/t/658439#reply40)
 
+## 0X10 Docker
+
+### 1. 学习笔记
+
+- [常用命令学习](notebook/docker学习/docker常用命令.md)
