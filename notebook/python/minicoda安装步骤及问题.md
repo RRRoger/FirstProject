@@ -8,16 +8,33 @@
 
 ## 1、下载安装文件
 
+- `For Mac OS`
 ```bash
 cd ~
-wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh
+wget https://repo.continuum.io/miniconda/miniconda3-latest-MacOSX-x86_64.sh
+```
+
+- `FOr Linux`
+```bash
+cd ~
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
 ## 2、安装
 
+- `For MacOSX`
+
 ```bash
 cd ~
-bash Miniconda2-latest-MacOSX-x86_64.sh
+bash miniconda3-latest-MacOSX-x86_64.sh
+# 根据提示完成安装
+```
+
+- `For Linux`
+
+```bash
+cd ~
+bash Miniconda3-latest-Linux-x86_64.sh
 # 根据提示完成安装
 ```
 
@@ -57,7 +74,7 @@ conda-env list
 
 # conda environments:
 #
-base                  *  /Users/chenpeng/miniconda2
+base                  *  /Users/chenpeng/miniconda3
 ```
 
 ## 7、创建虚拟环境
@@ -85,9 +102,9 @@ conda create -n py38 python=3.8 -y
 - 虚拟环境地址
 
 ```bash
-# environment location: /Users/chenpeng/miniconda2/envs/pj_odoo12
+# environment location: /Users/chenpeng/miniconda3/envs/pj_odoo12
 
-/Users/xxxx/miniconda2/envs/pj_odoo12
+/Users/xxxx/miniconda3/envs/pj_odoo12
 ```
 
 ## 8、激活和退出虚拟环境
@@ -104,11 +121,11 @@ conda deactivate
 
 ```bash
 # 去掉~/.bash_profile环境变量配置
-# added by Miniconda2 installer
-export PATH="/Users/chenpeng/miniconda2/bin:$PATH"
+# added by miniconda3 installer
+export PATH="/Users/chenpeng/miniconda3/bin:$PATH"
 
 # 删除miniconda
-rm -rf ~/miniconda2
+rm -rf ~/miniconda3
 
 # 去掉相关隐藏文件
 rm -rf ~/.condarc
