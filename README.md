@@ -26,6 +26,10 @@
 * [Nginx 服务器证书安装](notebook/linux/nginx_ssl_set_up)
 * [vim最常用的几个命令](notebook/linux/vim最常用的命令.md)
 
+## 0x015 算法
+
+- [Algorithm-Note](https://github.com/Dairongpeng/algorithm-note)
+
 ## 0x02 odoo
 
 * [系统 - Supervisor管理odoo服务](notebook/odoo/Supervisor管理odoo服务.md)
@@ -145,4 +149,11 @@
 
 ### 1. 学习笔记
 
+- [常见问题](notebook/docker学习/常见问题.md)
+
 - [常用命令学习](notebook/docker学习/docker常用命令.md)
+
+- [Centos 安装Docker 以及遇到的问题](notebook/docker学习/Centos_安装Docker_以及遇到的问题.md)
+
+  
+
