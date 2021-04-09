@@ -16,6 +16,7 @@
 * [Proxifier：Mac OS给某个单独应用配置代理上网服务](notebook/trivial/Proxifier使用.md)
 * [如何用好搜索引擎？](notebook/trivial/search_egine_cmd.md)
 * [常用英文词汇](notebook/trivial/vocabulary.md)
+* [Mac Airdrop 卡死不动](notebook/trivial/Mac_Airdrop_卡死不动.md)
 
 ## 0x01 ​​linux
 
