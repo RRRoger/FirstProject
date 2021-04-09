@@ -119,15 +119,18 @@ conda deactivate
 
 ## 9、卸载`miniconda`
 
+> - 去掉~/.bash_profile环境变量配置
+> - 删除`miniconda`目录
+> - 删除隐藏的配置文件
+
 ```bash
-# 去掉~/.bash_profile环境变量配置
-# added by miniconda3 installer
-export PATH="/Users/chenpeng/miniconda3/bin:$PATH"
+# 删除相关的环境变量配置  不是添加是删除哦!!!!!
+# export PATH="/Users/chenpeng/miniconda3/bin:$PATH"
 
 # 删除miniconda
 rm -rf ~/miniconda3
 
-# 去掉相关隐藏文件
+# 删除相关隐藏文件
 rm -rf ~/.condarc
 rm -rf ~/.conda
 rm -rf ~/.continuum
@@ -171,6 +174,10 @@ conda deactivate
 
 ```bash
 conda remove -n your_env_name(虚拟环境名称) --all
+
+# or
+
+conda env remove -n ENV_NAME
 ```
 
 ### 删除环境中的某个包
@@ -178,8 +185,6 @@ conda remove -n your_env_name(虚拟环境名称) --all
 ```bash
 conda remove --name your_env_name  package_name
 ```
-
-
 
 ## 11、换源
 
@@ -233,7 +238,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 ## 12、注意事项
 
-### 1、pyenv 和 conda 冲突
+### 1、解决pyenv 和 conda 冲突
 
 - 切换至系统的py环境
 
